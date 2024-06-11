@@ -1,0 +1,32 @@
+.main {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.content {
+	z-index: 1; /* Ensure the content is on top */
+	position: absolute; /* Position the content absolutely */
+	top: 50%; /* Center vertically */
+	left: 50%; /* Center horizontally */
+	transform: translate(-50%, -50%); /* Adjust for absolute centering */
+	width: 100%; /* Ensure it spans the full width */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header {
+	// background-color: white;
+	width: 80%;
+	margin-top: 20px;
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	border-radius: 1vw;
+	background: rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(10px);
+}

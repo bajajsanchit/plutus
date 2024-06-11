@@ -1,0 +1,18 @@
+/* styles.module.scss */
+.container {
+	// display: flex;
+	// justify-content: center;
+	// align-items: center;
+	height: 100vh;
+	width: 100vw;
+}
+
+.child {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0.8;
+}

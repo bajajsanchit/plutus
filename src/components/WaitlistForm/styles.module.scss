@@ -1,0 +1,81 @@
+.waitlist_container {
+	.form_container {
+		max-width: var(--breakpoint-sm);
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+
+		.form_content {
+			width: 80%;
+			line-height: 1.8;
+			font-weight: 400;
+			font-size: 24px;
+			color: var(--text-color);
+			font-family: var(--font-jost);
+			margin: 0;
+			margin-bottom: 16px;
+			margin-right: auto;
+
+			span {
+				display: block;
+				font-family: var(--font-space);
+				font-size: 44px;
+				font-weight: 700;
+			}
+		}
+
+		.form {
+			width: 100%;
+			padding: 24px 16px;
+
+			.navigation_buttons {
+				margin-top: 20px;
+				display: flex;
+				width: 100%;
+				justify-content: center;
+				align-items: center;
+
+				button {
+					border: none;
+					font-size: 20px;
+					color: var(--text-color);
+					font-family: var(--font-space);
+					font-weight: 700;
+					border-radius: 12px;
+					text-transform: uppercase;
+					height: 60px;
+					cursor: pointer;
+				}
+
+				.button_back {
+					margin-right: 8px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					padding: 0 12px;
+				}
+
+				.button_next {
+					width: 100%;
+
+					display: flex;
+					justify-content: flex-end;
+					align-items: center;
+					transition: 0.3s ease all;
+
+					&:hover {
+						text-decoration: underline;
+					}
+
+					svg {
+						transform: rotate(180deg);
+						margin-left: 8px;
+					}
+				}
+			}
+		}
+	}
+}

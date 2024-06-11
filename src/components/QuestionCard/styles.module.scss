@@ -1,0 +1,121 @@
+.question_card {
+	margin: 20px auto;
+	// padding: 48px 40px;
+	border-radius: 8px;
+	background-color: #ffffff;
+
+	p {
+		line-height: 1.3;
+		font-weight: 500;
+		font-size: 28px;
+		color: var(--text-color);
+		font-family: var(--font-space);
+		margin: 0;
+		margin-bottom: 12px;
+		// background-color: orange;
+	}
+
+	.description {
+		line-height: 1.5;
+		font-weight: 400;
+		font-size: 20px;
+		color: var(--text-color);
+		font-family: var(--font-jost);
+		margin: 0;
+		margin-bottom: 20px;
+	}
+
+	.answer_container {
+		display: flex;
+
+		input {
+			width: 100%;
+			font-size: 20px;
+			font-family: var(--font-jost);
+			font-weight: 400;
+			border-radius: 12px;
+			background-color: #f3f3f3;
+			color: var(--text-color);
+			height: 60px;
+			border: none;
+			padding: 0 12px;
+		}
+
+		.radio {
+			display: flex;
+			width: 100%;
+			gap: 16px;
+
+			input {
+				appearance: none;
+				width: 0px;
+			}
+
+			label {
+				background-color: #f3f3f3;
+				color: var(--text-color);
+				height: 75px;
+				border: none;
+				padding: 0 12px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				border-radius: 20px;
+			}
+		}
+	}
+
+	.error {
+		margin-top: 12px;
+		// background-color: orange;
+		font-family: var(--font-jost);
+		color: var(--text-color);
+	}
+
+	.navigation_buttons {
+		margin-top: 20px;
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+
+		button {
+			border: none;
+			font-size: 20px;
+			color: var(--text-color);
+			font-family: var(--font-space);
+			font-weight: 700;
+			border-radius: 12px;
+			text-transform: uppercase;
+			height: 60px;
+			cursor: pointer;
+		}
+
+		.button_back {
+			margin-right: 8px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0 12px;
+		}
+
+		.button_next {
+			width: 100%;
+
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			transition: 0.3s ease all;
+
+			&:hover {
+				text-decoration: underline;
+			}
+
+			svg {
+				transform: rotate(180deg);
+				margin-left: 8px;
+			}
+		}
+	}
+}

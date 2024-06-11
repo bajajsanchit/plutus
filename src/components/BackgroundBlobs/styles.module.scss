@@ -1,0 +1,181 @@
+@keyframes moveInCircle {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes moveVertical {
+	0% {
+		transform: translateY(-50%);
+	}
+	50% {
+		transform: translateY(50%);
+	}
+	100% {
+		transform: translateY(-50%);
+	}
+}
+
+@keyframes moveHorizontal {
+	0% {
+		transform: translateX(-50%) translateY(-10%);
+	}
+	50% {
+		transform: translateX(50%) translateY(10%);
+	}
+	100% {
+		transform: translateX(-50%) translateY(-10%);
+	}
+}
+
+.gradient_bg {
+	// --color-bg1: rgb(255, 250, 205); /* Lemon Chiffon */
+	// --color-bg2: rgb(255, 228, 181); /* Moccasin */
+	// --color1: 255, 127, 80; /* Coral */
+	// --color2: 255, 182, 193; /* Light Pink */
+	// --color3: 135, 206, 250; /* Light Sky Blue */
+	// --color4: 255, 222, 173; /* Navajo White */
+	// --color5: 240, 128, 128; /* Light Coral */
+	// --color-interactive: 255, 105, 180; /* Hot Pink */
+
+	// --color-bg1: rgb(255, 248, 220); /* Cornsilk */
+	// --color-bg2: rgb(255, 222, 173); /* Navajo White */
+	// --color1: 255, 160, 122; /* Light Salmon */
+	// --color2: 255, 182, 193; /* Light Pink */
+	// --color3: 255, 218, 185; /* Peach Puff */
+	// --color4: 255, 228, 225; /* Misty Rose */
+	// --color5: 250, 128, 114; /* Salmon */
+	// --color-interactive: 255, 105, 180; /* Hot Pink */
+
+	--color-bg1: rgb(255, 182, 193); /* Light Pink */
+	--color-bg2: rgb(255, 228, 225); /* Misty Rose */
+	--color1: 255, 160, 122; /* Light Salmon */
+	--color2: 255, 218, 185; /* Peach Puff */
+	--color3: 250, 128, 114; /* Salmon */
+	--color4: 255, 222, 173; /* Navajo White */
+	--color5: 240, 230, 140; /* Light Khaki */
+	--color-interactive: 255, 105, 180; /* Hot Pink */
+
+	--circle-size: 90%;
+	--blending: hard-light;
+
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	background: linear-gradient(
+		40deg,
+		rgb(var(--color-bg1)),
+		rgb(var(--color-bg2))
+	);
+	top: 0;
+	left: 0;
+
+	svg {
+		display: none;
+	}
+
+	.gradients_container {
+		filter: url(#goo) blur(60px);
+		width: 100%;
+		height: 100%;
+	}
+
+	.gradient_orb_1,
+	.gradient_orb_2,
+	.gradient_orb_3,
+	.gradient_orb_4,
+	.gradient_orb_5 {
+		position: absolute;
+		width: var(--circle-size, 80%);
+		height: var(--circle-size, 80%);
+		top: calc(50% - var(--circle-size) / 2);
+		left: calc(50% - var(--circle-size) / 2);
+		transform-origin: center center;
+		mix-blend-mode: var(--blending);
+		opacity: 1;
+	}
+
+	.gradient_orb_1 {
+		background: radial-gradient(
+				circle at center,
+				rgba(var(--color1), 0.6) 0,
+				rgba(var(--color1), 0) 50%
+			)
+			no-repeat;
+		animation: moveVertical 30s ease infinite;
+	}
+
+	.gradient_orb_2 {
+		background: radial-gradient(
+				circle at center,
+				rgba(var(--color2), 0.6) 0,
+				rgba(var(--color2), 0) 50%
+			)
+			no-repeat;
+		transform-origin: calc(50% - 400px);
+		animation: moveInCircle 20s reverse infinite;
+	}
+
+	.gradient_orb_3 {
+		background: radial-gradient(
+				circle at center,
+				rgba(var(--color3), 0.6) 0,
+				rgba(var(--color3), 0) 50%
+			)
+			no-repeat;
+		top: calc(50% - var(--circle-size) / 2 + 200px);
+		left: calc(50% - var(--circle-size) / 2 - 500px);
+		transform-origin: calc(50% + 400px);
+		animation: moveInCircle 40s linear infinite;
+	}
+
+	.gradient_orb_4 {
+		background: radial-gradient(
+				circle at center,
+				rgba(var(--color4), 0.6) 0,
+				rgba(var(--color4), 0) 50%
+			)
+			no-repeat;
+		transform-origin: calc(50% - 200px);
+		animation: moveHorizontal 40s ease infinite;
+		opacity: 0.7;
+	}
+
+	.gradient_orb_5 {
+		background: radial-gradient(
+				circle at center,
+				rgba(var(--color5), 0.6) 0,
+				rgba(var(--color5), 0) 50%
+			)
+			no-repeat;
+		width: calc(var(--circle-size) * 2);
+		height: calc(var(--circle-size) * 2);
+		top: calc(50% - var(--circle-size));
+		left: calc(50% - var(--circle-size));
+		transform-origin: calc(50% - 800px) calc(50% + 200px);
+		animation: moveInCircle 20s ease infinite;
+	}
+
+	.interactive {
+		position: absolute;
+		background: radial-gradient(
+				circle at center,
+				rgba(var(--color-interactive), 0.7) 0,
+				rgba(var(--color-interactive), 0) 50%
+			)
+			no-repeat;
+		mix-blend-mode: var(--blending);
+		width: 100%;
+		height: 100%;
+		top: -50%;
+		left: -50%;
+		opacity: 0.7;
+	}
+}
