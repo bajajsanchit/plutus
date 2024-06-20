@@ -42,7 +42,7 @@ const Header = () => {
 						</button>
 					))} */}
 
-					<button>
+					{/* <button>
 						<Link href="/about">Explore</Link>
 					</button>
 
@@ -52,7 +52,7 @@ const Header = () => {
 
 					<button>
 						<Link href="/discover">Learn</Link>
-					</button>
+					</button> */}
 
 					{/* <div className={styles.nav_data_container}>
 						<p>Test</p>

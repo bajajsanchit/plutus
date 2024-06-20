@@ -1,16 +1,10 @@
 "use client";
-import {
-	motion,
-	useScroll,
-	useTransform,
-	useMotionValueEvent,
-} from "framer-motion";
-import { useEffect, useState, useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import styles from "./styles.module.scss";
 
 const DivergingElements = () => {
 	const containerRef = useRef(null);
-	const [startAnimation, setStartAnimation] = useState(false);
 
 	const useScrollProgress = (ref, offset) => {
 		const { scrollYProgress } = useScroll({
@@ -32,11 +26,7 @@ const DivergingElements = () => {
 		[3, 1.4]
 	);
 
-	useMotionValueEvent(transformedScaleProgress, "change", (value) => {
-		if (value === 1.4 && startAnimation) {
-			setStartAnimation(true);
-		}
-	});
+	const startAnimation = false;
 
 	const brandsArray = [
 		{ name: "gift", bgColor: "#F5F0FF" },
@@ -64,7 +54,7 @@ const DivergingElements = () => {
 
 	const getPosition = (index) => {
 		const angle = (360 / brandsArray.length) * index; // distribute angles evenly
-		const radius = 300; // radius of the circle
+		const radius = 275; // radius of the circle
 		return {
 			x: radius * Math.cos((angle * Math.PI) / 180),
 			y: radius * Math.sin((angle * Math.PI) / 180),
@@ -79,7 +69,7 @@ const DivergingElements = () => {
 				display: "flex",
 				flexDirection: "column",
 				alignItems: "flex-start",
-				minHeight: "225vh",
+				minHeight: "200vh",
 				position: "relative",
 				background: "#f1f1f1",
 			}}
@@ -112,14 +102,12 @@ const DivergingElements = () => {
 								rotate: getRotation(index),
 							}}
 							animate={
-								startAnimation
-									? {
-											scale: 1,
-											x: getPosition(index).x,
-											y: getPosition(index).y,
-											rotate: 0,
-									  }
-									: {}
+								startAnimation && {
+									scale: 1,
+									x: getPosition(index).x,
+									y: getPosition(index).y,
+									rotate: 0,
+								}
 							}
 							transition={{
 								type: "spring",

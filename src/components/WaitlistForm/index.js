@@ -68,8 +68,9 @@ const WaitlistForm = () => {
 			<div className={styles.form_container}>
 				<div className={styles.form_content}>
 					<p>
-						<span>Join the Waitlist</span>
-						{/* Give yourself some credit. */}
+						<span>Stay Ahead with Plutus</span>
+						Add your name to the waitlist and be the first to experience a
+						revolutionary way to manage and maximize your credit card benefits.
 					</p>
 				</div>
 

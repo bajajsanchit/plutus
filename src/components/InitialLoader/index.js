@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import styles from "./styles.module.scss";
 import { motion, AnimatePresence } from "framer-motion";
 
-const InitialLoader = () => {
+const InitialLoader = ({ onComplete }) => {
 	const [loaderPercentage, setLoaderPercentage] = useState(0);
 	const [isLoaded, setIsLoaded] = useState(false);
 	const [animateLogoOut, setAnimateLogoOut] = useState(false);
@@ -14,8 +14,8 @@ const InitialLoader = () => {
 				const nextPercentage = prev + 1;
 				if (nextPercentage >= 101) {
 					clearInterval(interval);
-					setIsLoaded(true);
 					setTimeout(() => setAnimateLogoOut(true), 500);
+					setIsLoaded(true);
 					return 101;
 				}
 				return nextPercentage;
@@ -24,6 +24,12 @@ const InitialLoader = () => {
 
 		return () => clearInterval(interval);
 	}, []);
+
+	useEffect(() => {
+		if (isLoaded) {
+			onComplete();
+		}
+	}, [isLoaded, onComplete]);
 
 	const containerAnimationVariants = {
 		hidden: { opacity: 1, y: 0 },

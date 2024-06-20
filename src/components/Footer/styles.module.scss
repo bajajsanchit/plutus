@@ -2,6 +2,8 @@
 	padding: 48px var(--space-md);
 	overflow: hidden;
 	position: relative;
+	// background-color: #000;
+	color: #000;
 	// background-color: black;
 	// color: white !important;
 
@@ -25,7 +27,6 @@
 				line-height: 1.5;
 				font-weight: 400;
 				font-size: 20px;
-				color: var(--text-color);
 				font-family: var(--font-jost);
 
 				.name {
@@ -59,6 +60,7 @@
 					font-weight: 600;
 					margin-bottom: 16px;
 					text-transform: uppercase;
+					color: #000;
 				}
 
 				.link_container {
@@ -72,8 +74,8 @@
 						background: transparent;
 						border: none;
 						font-family: var(--font-jost);
+						color: #000;
 						font-size: 16px;
-						color: var(--text-color);
 						cursor: pointer;
 						transition: 0.3s ease all;
 					}

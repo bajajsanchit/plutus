@@ -1,0 +1,118 @@
+.vacation_container {
+	.parallax {
+		height: 150vh;
+		margin-bottom: 10vh;
+
+		.vacation_container_text {
+			position: sticky;
+			top: 10vh;
+			max-width: var(--breakpoint-sm);
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			.title {
+				margin-bottom: 0.5em;
+				font-size: 52px;
+				font-family: var(--font-space);
+				font-weight: 800;
+				line-height: 1.3;
+			}
+
+			.text {
+				margin: 0;
+				font-size: 28px;
+				font-family: var(--font-jost);
+				font-weight: 500;
+				line-height: 1.5;
+			}
+		}
+	}
+
+	.parallax_scroll_container {
+		background-color: rgb(24, 24, 24);
+		display: flex;
+		height: 200vh;
+		gap: 1vw;
+		padding: 1em;
+		overflow: hidden;
+
+		.cards_container {
+			display: flex;
+			flex-direction: column;
+			width: 25%;
+			gap: 1vw;
+			position: relative;
+
+			&:nth-of-type(1) {
+				top: -32%;
+			}
+
+			&:nth-of-type(2) {
+				top: -55%;
+			}
+
+			&:nth-of-type(3) {
+				top: -40%;
+			}
+
+			&:nth-of-type(4) {
+				top: -75%;
+			}
+
+			.card {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+
+				.content_container {
+					padding: 1em;
+					color: black;
+					border-bottom-left-radius: 1vw;
+					border-bottom-right-radius: 1vw;
+
+					.title {
+						font-family: var(--font-space);
+						font-size: 16px;
+						font-weight: 700;
+						margin-bottom: 4px;
+					}
+
+					.description {
+						font-family: "Jost", sans-serif;
+						margin-bottom: 8px;
+						line-height: 1.5;
+						font-size: 14px;
+						color: rgb(69, 69, 69);
+					}
+
+					.points {
+						font-family: var(--font-space);
+						margin-bottom: 4px;
+						line-height: 1.5;
+						font-weight: 700;
+						font-size: 16px;
+					}
+				}
+
+				.image_container {
+					width: 100%;
+					height: 100%;
+					position: relative;
+					border-top-left-radius: 1vw;
+					border-top-right-radius: 1vw;
+
+					.img {
+						border-top-left-radius: 1vw;
+						border-top-right-radius: 1vw;
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+		}
+	}
+}

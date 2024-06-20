@@ -1,5 +1,5 @@
 "use client";
-import { use, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 //styles
 import styles from "./styles.module.scss";
 //components
