@@ -1,33 +1,31 @@
 {
-  "name": "plutus",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@react-three/fiber": "^8.16.8",
-    "@studio-freight/lenis": "^1.0.42",
-    "@supabase/supabase-js": "^2.43.1",
-    "@types/three": "^0.165.0",
-    "formik": "^2.4.6",
-    "framer-motion": "^11.2.12",
-    "lenis": "^1.0.45",
-    "next": "14.2.3",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-fast-marquee": "^1.6.4",
-    "react-intersection-observer": "^9.10.2",
-    "sass": "^1.77.0",
-    "shadergradient": "^1.2.14",
-    "three": "^0.165.0",
-    "yup": "^1.4.0"
-  },
-  "devDependencies": {
-    "eslint": "^8",
-    "eslint-config-next": "14.2.3"
-  }
+	"name": "plutus",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@react-three/fiber": "^8.16.8",
+		"@studio-freight/lenis": "^1.0.42",
+		"@supabase/supabase-js": "^2.43.1",
+		"formik": "^2.4.6",
+		"framer-motion": "^11.2.12",
+		"lenis": "^1.0.45",
+		"next": "14.2.3",
+		"react": "^18",
+		"react-dom": "^18",
+		"react-fast-marquee": "^1.6.4",
+		"react-intersection-observer": "^9.10.2",
+		"sass": "^1.77.0",
+		"shadergradient": "^1.2.14",
+		"yup": "^1.4.0"
+	},
+	"devDependencies": {
+		"eslint": "^8",
+		"eslint-config-next": "14.2.3"
+	}
 }
