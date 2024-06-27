@@ -42,7 +42,7 @@ export default function Home() {
 			{/* <Header /> */}
 
 			<HeroSection />
-
+			<BentoGrid />
 			<VacationOffers />
 
 			{/* <div style={{ height: "140vh" }}></div> */}
@@ -50,8 +50,6 @@ export default function Home() {
 			<DivergingElements />
 
 			<Partners />
-
-			<BentoGrid />
 
 			<WaitlistForm />
 

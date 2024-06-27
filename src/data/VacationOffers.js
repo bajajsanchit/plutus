@@ -1,11 +1,11 @@
 const marriottProperties = [
-	{
-		title: "Courtyard by Marriott Ahmedabad",
-		pointsNeeded: 15000,
-		description: "Comfortable and modern stay in Ahmedabad's business hub.",
-		image:
-			"https://cf.bstatic.com/xdata/images/hotel/max1024x768/461651190.jpg?k=8673bb4822f3ac0fc9a9b1a9fc3d830a4d2132cfd5e5a1375234917bcc5e843a&o=&hp=1",
-	},
+	// {
+	// 	title: "Courtyard by Marriott Ahmedabad",
+	// 	pointsNeeded: 15000,
+	// 	description: "Comfortable and modern stay in Ahmedabad's business hub.",
+	// 	image:
+	// 		"https://cf.bstatic.com/xdata/images/hotel/max1024x768/461651190.jpg?k=8673bb4822f3ac0fc9a9b1a9fc3d830a4d2132cfd5e5a1375234917bcc5e843a&o=&hp=1",
+	// },
 	{
 		title: "The Westin Hyderabad Mindspace",
 		pointsNeeded: 25000,
@@ -27,13 +27,13 @@ const marriottProperties = [
 		image:
 			"https://cf.bstatic.com/xdata/images/hotel/max1024x768/463615042.jpg?k=f433354d2a4de0529c59fa0e9f86a49a6134bdc07f4ab361abcaae6e7e53aa79&o=&hp=1",
 	},
-	{
-		title: "Le Méridien Mahabaleshwar Resort & Spa",
-		pointsNeeded: 30000,
-		description: "Luxury resort in the hills of Mahabaleshwar.",
-		image:
-			"https://cf.bstatic.com/xdata/images/hotel/max1024x768/469203458.jpg?k=beab3446cba921014e997b179045c4108769541d957d953b2478949fa1ceab6d&o=&hp=1",
-	},
+	// {
+	// 	title: "Le Méridien Mahabaleshwar Resort & Spa",
+	// 	pointsNeeded: 30000,
+	// 	description: "Luxury resort in the hills of Mahabaleshwar.",
+	// 	image:
+	// 		"https://cf.bstatic.com/xdata/images/hotel/max1024x768/469203458.jpg?k=beab3446cba921014e997b179045c4108769541d957d953b2478949fa1ceab6d&o=&hp=1",
+	// },
 	{
 		title: "Goa Marriott Resort & Spa",
 		pointsNeeded: 35000,
@@ -55,13 +55,13 @@ const marriottProperties = [
 		image:
 			"https://cf.bstatic.com/xdata/images/hotel/max1024x768/469186253.jpg?k=2e7d7e3cef641e349076325ca89e4c9466631cb29b2c2d49c8e7c3b3a8e53da8&o=&hp=1",
 	},
-	{
-		title: "Aloft Bengaluru Cessna Business Park",
-		pointsNeeded: 15000,
-		description: "Trendy hotel in Bengaluru's tech park area.",
-		image:
-			"https://cf.bstatic.com/xdata/images/hotel/max1024x768/517376287.jpg?k=07fd6f0c70d5e1ee1fe486c458ffd87a31b2ae9d31f0c9db7e923d05bcb26c99&o=&hp=1",
-	},
+	// {
+	// 	title: "Aloft Bengaluru Cessna Business Park",
+	// 	pointsNeeded: 15000,
+	// 	description: "Trendy hotel in Bengaluru's tech park area.",
+	// 	image:
+	// 		"https://cf.bstatic.com/xdata/images/hotel/max1024x768/517376287.jpg?k=07fd6f0c70d5e1ee1fe486c458ffd87a31b2ae9d31f0c9db7e923d05bcb26c99&o=&hp=1",
+	// },
 	{
 		title: "JW Marriott Hotel Pune",
 		pointsNeeded: 35000,
@@ -76,13 +76,13 @@ const marriottProperties = [
 		image:
 			"https://cf.bstatic.com/xdata/images/hotel/max1024x768/451103750.jpg?k=a5dffac76819bb5e1bd94c6e481c3fb54fed04ca0b83c63d43524a149e963de2&o=&hp=1",
 	},
-	{
-		title: "Fairfield by Marriott Kolkata",
-		pointsNeeded: 15000,
-		description: "Convenient and budget-friendly stay in Kolkata.",
-		image:
-			"https://cf.bstatic.com/xdata/images/hotel/max1024x768/459766077.jpg?k=f5ab44e69e56f475fce64c138c0a7b589c58679620a217c905bd825f71ae3598&o=&hp=1",
-	},
+	// {
+	// 	title: "Fairfield by Marriott Kolkata",
+	// 	pointsNeeded: 15000,
+	// 	description: "Convenient and budget-friendly stay in Kolkata.",
+	// 	image:
+	// 		"https://cf.bstatic.com/xdata/images/hotel/max1024x768/459766077.jpg?k=f5ab44e69e56f475fce64c138c0a7b589c58679620a217c905bd825f71ae3598&o=&hp=1",
+	// },
 	{
 		title: "Sheraton Grand Chennai Resort & Spa",
 		pointsNeeded: 25000,

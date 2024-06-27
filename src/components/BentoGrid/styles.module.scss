@@ -1,5 +1,5 @@
 .features_container {
-	background-color: #82baaa;
+	background-color: #040404;
 
 	.parallax {
 		height: 150vh;
@@ -19,6 +19,7 @@
 				font-family: var(--font-space);
 				font-weight: 800;
 				line-height: 1.3;
+				color: #fff;
 			}
 
 			.text {
@@ -27,6 +28,7 @@
 				font-family: var(--font-jost);
 				font-weight: 500;
 				line-height: 1.5;
+				// color: #fff;
 			}
 		}
 	}
@@ -39,7 +41,7 @@
 		.gridParallax {
 			max-width: var(--breakpoint-lg);
 			// padding-bottom: 10vh;
-			margin: 10vh auto 5vh;
+			margin: 10vh auto 0vh;
 			// height: 150vh;
 
 			.grid {
@@ -62,6 +64,12 @@
 					flex-direction: column;
 					// justify-content: space-between;
 
+					img {
+						width: 250px;
+						height: 250px;
+						margin: 0 auto;
+					}
+
 					.title {
 						margin: 0;
 						font-size: 14px;
@@ -71,7 +79,7 @@
 						width: max-content;
 						padding: 8px;
 						border-radius: 8px;
-						background-color: #ededed;
+						background-color: #e38847;
 					}
 
 					.description {
@@ -93,13 +101,13 @@
 
 						&_r1 {
 							.title {
-								background-color: #93e9be !important;
+								// background-color: #93e9be !important;
 							}
 						}
 
 						&_r2 {
 							.title {
-								background-color: #89cff0 !important;
+								// background-color: #89cff0 !important;
 							}
 						}
 					}
@@ -109,9 +117,9 @@
 						grid-template-rows: 1fr 1fr;
 
 						&_r1 {
-							.title {
-								background-color: #fdfd96 !important;
-							}
+							display: grid;
+							grid-template-columns: 1fr 1fr;
+							background-color: 1fr 1fr;
 						}
 
 						&_r2 {
@@ -131,7 +139,7 @@
 
 							&_c2 {
 								.title {
-									background-color: #ff944d !important;
+									// background-color: #ff944d !important;
 								}
 							}
 						}
@@ -140,19 +148,32 @@
 
 				&_r2 {
 					display: grid;
-					grid-template-columns: 1fr 1fr;
+					grid-template-columns: 1fr 1fr 1fr;
 
 					&_c1 {
 						.title {
-							background-color: #e6e6fa !important;
+							// background-color: #e6e6fa !important;
 						}
 					}
 
 					&_c2 {
 						.title {
-							background-color: #ff8a80 !important;
+							// background-color: #ff8a80 !important;
 						}
 					}
+				}
+
+				.special_one {
+					background-color: #e38847;
+					p {
+						font-size: 3em;
+						font-weight: 700;
+						font-family: var(--font-space);
+					}
+				}
+
+				.special_two {
+					background-color: #e38847;
 				}
 			}
 		}

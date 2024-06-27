@@ -90,19 +90,13 @@ const BentoGrid = () => {
 					<motion.p
 						style={{
 							translateY: translateYParallax,
+							color: "#fff",
 						}}
 						className={styles.text}
 					>
-						{words.map((word, index) => (
-							<AnimatedWord
-								key={index}
-								word={word}
-								index={index}
-								elementClass={styles.text}
-								totalWords={totalWords}
-								scrollProgress={parallaxContainer_scrollYProgress}
-							/>
-						))}
+						{
+							"Step into a world where every credit card transaction is a step towards unparalleled savings. With Plutus, compare leading credit cards effortlessly, maximize your reward points, and unlock exclusive deals that make every spend worthwhile. Experience the joy of smart spending and saving simultaneously—because you deserve the best of both worlds."
+						}
 					</motion.p>
 				</div>
 			</div>
@@ -123,21 +117,26 @@ const BentoGrid = () => {
 									<p className={styles.description}>
 										Elevate Every Transaction to Maximum Rewards
 									</p>
+									<img src="/images/deposit.png" className="img" />
 								</div>
 
 								<div className={`${styles.grid_r1_c1_r2} ${styles.grid_item}`}>
-									<p className={styles.title}>Hot Deals Alert</p>
+									<p className={styles.title}>Deal Magnet</p>
 									<p className={styles.description}>
 										First in Line for Exclusive Credit Card Deals
 									</p>
+									<img src="/images/magnet.png" className="img" />
 								</div>
 							</div>
 							<div className={`${styles.grid_r1_c2}`}>
-								<div className={`${styles.grid_r1_c2_r1} ${styles.grid_item}`}>
-									<p className={styles.title}>Card Genius</p>
+								<div
+									className={`${styles.grid_r1_c2_r1} ${styles.grid_item}   ${styles.special_two}`}
+								>
+									{/* <p className={styles.title}>Card Genius</p>
 									<p className={styles.description}>
 										Your Ultimate Card Selector: Compare, Choose, Celebrate
-									</p>
+									</p> */}
+									{/* <img src="/images/megaphone.png" className="img" /> */}
 								</div>
 								<div className={`${styles.grid_r1_c2_r2}`}>
 									<div
@@ -158,29 +157,40 @@ const BentoGrid = () => {
 									<div
 										className={`${styles.grid_r1_c2_r2_c2} ${styles.grid_item}`}
 									>
-										<p className={styles.title}>Update Central</p>
+										<p className={styles.title}>Smart Shopper</p>
 										<p className={styles.description}>
 											Stay Updated: Latest Cards, Immediate Benefits
 										</p>
+										<img src="/images/shopping-cart.png" className="img" />
 									</div>
 								</div>
 							</div>
 						</div>
 						<div className={`${styles.grid_r2}`}>
-							<div className={`${styles.grid_r2_c1} ${styles.grid_item}`}>
-								<p className={styles.title}>Rewards Masterclass</p>
+							<div
+								className={`${styles.grid_r2_c1} ${styles.grid_item}  ${styles.special_one}`}
+							>
+								{/* <p>More Rewards, Less Effort</p> */}
+								{/* <p className={styles.title}>Rewards Masterclass</p>
 								<p className={styles.description}>
 									Master the Art of Reward Maximization
-								</p>
+								</p> */}
 							</div>
 							<div className={`${styles.grid_r2_c2} ${styles.grid_item}`}>
 								<p className={styles.title}>Credit Wise</p>
 								<p className={styles.description}>
 									Learn, Grow, and Master Your Financial Health
 								</p>
-								{/* <img
-									src={"images/3d-casual-life-chart-window-with-analytics.png"}
-								/> */}
+
+								<img src="/images/wallet.png" className="img" />
+							</div>
+
+							<div className={`${styles.grid_r2_c2} ${styles.grid_item}`}>
+								<p className={styles.title}>Points Champion</p>
+								<p className={styles.description}>
+									Master the Art of Reward Maximization
+								</p>
+								<img src="/images/trophy.png" className="img" />
 							</div>
 						</div>
 					</motion.div>

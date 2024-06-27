@@ -9,10 +9,11 @@ import AnimatedWord from "@/components/AnimatedWord";
 import { motion, useScroll, useTransform, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import CreditCards from "@/data/CardData";
+import Marquee from "react-fast-marquee";
 
 const Partners = () => {
 	const featuresText =
-		"Imagine having all your favorite credit card rewards in one place. With Plutus, it's a reality! We bring you exclusive deals, jaw-dropping cashback offers, and incredible perks from top banks and credit card partners, all tailored just for you. Say goodbye to hidden perks and hello to maximizing your benefits. Join Plutus today and turn everyday spending into extraordinary savings.";
+		"We bring you exclusive deals, jaw-dropping cashback offers, and incredible perks from top banks and credit card partners, all tailored just for you.";
 	const words = featuresText.split(" ");
 	const totalWords = words.length;
 
@@ -97,45 +98,53 @@ const Partners = () => {
 
 	return (
 		<div className={styles.partners_container}>
-			<div className={styles.parallax} ref={parallaxContainerRef}>
-				<div className={styles.vacation_container_text}>
-					<motion.p
-						ref={fadeInRef}
-						initial="hidden"
-						animate={controls}
-						variants={variants}
-						className={styles.title}
-					>
-						{"Unveil the treasure trove of credit card rewards with Plutus."}
-					</motion.p>
+			<div className={styles.parent}>
+				<div className={styles.parallax} ref={parallaxContainerRef}>
+					<div className={styles.vacation_container_text}>
+						<motion.p
+							ref={fadeInRef}
+							initial="hidden"
+							animate={controls}
+							variants={variants}
+							className={styles.title}
+						>
+							{"Unveil the treasure trove of credit card rewards with Plutus."}
+						</motion.p>
 
-					<motion.p
-						style={{
-							translateY: translateYParallax,
-						}}
-						className={styles.text}
-					>
-						{words.map((word, index) => (
-							<AnimatedWord
-								key={index}
-								word={word}
-								index={index}
-								elementClass={styles.text}
-								totalWords={totalWords}
-								scrollProgress={parallaxContainer_scrollYProgress}
-							/>
-						))}
-					</motion.p>
+						<motion.p className={styles.text}>
+							{/* {words.map((word, index) => (
+								<AnimatedWord
+									key={index}
+									word={word}
+									index={index}
+									elementClass={styles.text}
+									totalWords={totalWords}
+									scrollProgress={parallaxContainer_scrollYProgress}
+								/>
+							))} */}
+
+							{featuresText}
+						</motion.p>
+
+						<div style={{ display: "flex", width: "100%" }}>
+							<button className={styles.button}>Join Waitlist</button>
+							<button className={styles.know}>Know More</button>
+						</div>
+					</div>
 				</div>
-			</div>
 
-			<div
-				ref={scroll_container_ref}
-				className={styles.parallax_scroll_container}
-			>
-				{subarrays.map((data, index) => (
-					<Row key={index} arr={data} x={x_displacements[index]} />
-				))}
+				<div
+					ref={scroll_container_ref}
+					className={styles.parallax_scroll_container}
+				>
+					{subarrays.map((data, index) => (
+						<Row
+							key={index}
+							arr={data}
+							x={Math.floor(Math.random() * (300 - 180 + 1)) + 180}
+						/>
+					))}
+				</div>
 			</div>
 		</div>
 	);
@@ -162,20 +171,24 @@ const Card = ({ title, description, background, network }) => {
 	);
 };
 
-const Row = ({ arr, x = 0 }) => {
+const Row = ({ arr, x }) => {
 	return (
-		<motion.div style={{ x: x }} className={styles.row_container}>
-			{arr.map((data, index) => (
-				<div className={styles.card_container} key={index}>
-					<Card
-						index={index}
-						title={data.bank}
-						description={data.card}
-						background={data.backgroundColor}
-						network={data.network}
-					/>
-				</div>
-			))}
-		</motion.div>
+		// <motion.div style={{ x: x }} >
+		<Marquee speed={x}>
+			<div className={styles.row_container}>
+				{arr.map((data, index) => (
+					<div className={styles.card_container} key={index}>
+						<Card
+							index={index}
+							title={data.bank}
+							description={data.card}
+							background={data.backgroundColor}
+							network={data.network}
+						/>
+					</div>
+				))}
+			</div>
+		</Marquee>
+		// </motion.div>
 	);
 };

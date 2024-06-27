@@ -15,7 +15,8 @@ const VacationOffers = () => {
 	const { height } = useDimension();
 
 	const featuresText =
-		"Discover the hidden power of your credit card reward points! At Plutus, we turn your points into dream vacations at luxury hotels. From exotic getaways to lavish suites, our super saver deals let you experience the best without breaking the bank. Start your journey to unforgettable memories today!";
+		// "Discover the hidden power of your credit card reward points! At Plutus, we turn your points into dream vacations at luxury hotels.
+		"From exotic getaways to lavish suites, our super saver deals let you experience the best without breaking the bank. Start your journey to unforgettable memories today!";
 	const words = featuresText.split(" ");
 	const totalWords = words.length;
 
@@ -118,6 +119,15 @@ const VacationOffers = () => {
 
 	return (
 		<div className={styles.vacation_container}>
+			<div
+				ref={scroll_container_ref}
+				className={styles.parallax_scroll_container}
+			>
+				{subarrays.map((data, index) => (
+					<Column key={index} arr={data} y={y_displacements[index]} />
+				))}
+			</div>
+
 			<div className={styles.parallax} ref={parallaxContainerRef}>
 				<div className={styles.vacation_container_text}>
 					<motion.p
@@ -132,11 +142,12 @@ const VacationOffers = () => {
 
 					<motion.p
 						style={{
-							translateY: translateYParallax,
+							// translateY: translateYParallax,
+							color: "#007295",
 						}}
 						className={styles.text}
 					>
-						{words.map((word, index) => (
+						{/* {words.map((word, index) => (
 							<AnimatedWord
 								key={index}
 								word={word}
@@ -145,18 +156,17 @@ const VacationOffers = () => {
 								totalWords={totalWords}
 								scrollProgress={parallaxContainer_scrollYProgress}
 							/>
-						))}
+						))} */}
+						{
+							"From exotic getaways to lavish suites, our super saver deals let you experience the best without breaking the bank. Start your journey to unforgettable memories today!"
+						}
 					</motion.p>
-				</div>
-			</div>
 
-			<div
-				ref={scroll_container_ref}
-				className={styles.parallax_scroll_container}
-			>
-				{subarrays.map((data, index) => (
-					<Column key={index} arr={data} y={y_displacements[index]} />
-				))}
+					<div style={{ display: "flex", width: "100%" }}>
+						<button className={styles.button}>Join Waitlist</button>
+						<button className={styles.know}>Know More</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
@@ -172,10 +182,8 @@ const Card = ({ title, description, image_name, points }) => {
 			</div>
 
 			<div className={styles.content_container} style={{ background: "#fff" }}>
-				<div style={{ textDecoration: `underline` }} className={styles.title}>
-					{title}
-				</div>
-				<div className={styles.description}>{description}</div>
+				<div className={styles.title}>{title}</div>
+				{/* <div className={styles.description}>{description}</div> */}
 				<div className={styles.points}>{points} points/night</div>
 			</div>
 		</div>
