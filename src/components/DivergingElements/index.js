@@ -89,7 +89,7 @@ const DivergingElements = () => {
 						width: "100%",
 						justifyContent: "center",
 						alignItems: "center",
-						background: "lightpink",
+						background: "#000",
 					}}
 				>
 					{brandsArray.map((brand, index) => (
@@ -135,12 +135,13 @@ const DivergingElements = () => {
 
 					<div
 						style={{
-							opacity: 0.05,
+							opacity: 0.2,
 							fontFamily: "Space Grotesk",
 							fontSize: "15vw",
 							fontWeight: "800",
 							textAlign: "center",
 							lineHeight: "1",
+							color: "#007295",
 						}}
 					>
 						GIVE YOURSELF <br /> SOME CREDIT
