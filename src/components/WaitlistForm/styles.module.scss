@@ -1,4 +1,5 @@
 .waitlist_container {
+	background-color: #000;
 	.form_container {
 		max-width: var(--breakpoint-sm);
 		height: 100vh;
@@ -13,7 +14,8 @@
 			line-height: 1.8;
 			font-weight: 400;
 			font-size: 24px;
-			color: var(--text-color);
+			// color: var(--text-color);
+			color: #b7edff;
 			font-family: var(--font-jost);
 			margin: 0;
 			margin-bottom: 16px;
@@ -30,6 +32,7 @@
 		.form {
 			width: 100%;
 			padding: 24px 16px;
+			// background-color: #000;
 
 			.navigation_buttons {
 				margin-top: 20px;
