@@ -143,7 +143,7 @@ const VacationOffers = () => {
 					<motion.p
 						style={{
 							// translateY: translateYParallax,
-							color: "#b6eeff",
+							color: "#bcbcbc",
 						}}
 						className={styles.text}
 					>

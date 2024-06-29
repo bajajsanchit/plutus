@@ -89,8 +89,8 @@ const BentoGrid = () => {
 
 					<motion.p
 						style={{
-							translateY: translateYParallax,
-							color: "#fff",
+							// translateY: translateYParallax,
+							color: "#bcbcbc",
 						}}
 						className={styles.text}
 					>
@@ -98,6 +98,11 @@ const BentoGrid = () => {
 							"Step into a world where every credit card transaction is a step towards unparalleled savings. With Plutus, compare leading credit cards effortlessly, maximize your reward points, and unlock exclusive deals that make every spend worthwhile. Experience the joy of smart spending and saving simultaneously—because you deserve the best of both worlds."
 						}
 					</motion.p>
+
+					<div style={{ display: "flex", width: "100%" }}>
+						<button className={styles.button}>Join Waitlist</button>
+						<button className={styles.know}>Know More</button>
+					</div>
 				</div>
 			</div>
 
@@ -113,18 +118,24 @@ const BentoGrid = () => {
 						<div className={`${styles.grid_r1}`}>
 							<div className={`${styles.grid_r1_c1}`}>
 								<div className={`${styles.grid_r1_c1_r1} ${styles.grid_item}`}>
-									<p className={styles.title}>Max Rewards</p>
-									<p className={styles.description}>
-										Elevate Every Transaction to Maximum Rewards
-									</p>
+									<div>
+										<p className={styles.title}>Max Rewards</p>
+										<p className={styles.description}>
+											Unlock unparalleled rewards with strategies and our
+											comprehensive calculator.
+										</p>
+									</div>
 									<img src="/images/deposit.png" className="img" />
 								</div>
 
 								<div className={`${styles.grid_r1_c1_r2} ${styles.grid_item}`}>
-									<p className={styles.title}>Deal Magnet</p>
-									<p className={styles.description}>
-										First in Line for Exclusive Credit Card Deals
-									</p>
+									<div>
+										<p className={styles.title}>Deal Magnet</p>
+										<p className={styles.description}>
+											Attract unbeatable deals with our savvy savings strategies
+											and exclusive offers.
+										</p>
+									</div>
 									<img src="/images/magnet.png" className="img" />
 								</div>
 							</div>
@@ -157,10 +168,13 @@ const BentoGrid = () => {
 									<div
 										className={`${styles.grid_r1_c2_r2_c2} ${styles.grid_item}`}
 									>
-										<p className={styles.title}>Smart Shopper</p>
-										<p className={styles.description}>
-											Stay Updated: Latest Cards, Immediate Benefits
-										</p>
+										<div>
+											<p className={styles.title}>Smart Shopper</p>
+											<p className={styles.description}>
+												Elevate your shopping savvy with our expert tools and
+												insider tips.
+											</p>
+										</div>
 										<img src="/images/shopping-cart.png" className="img" />
 									</div>
 								</div>
@@ -177,19 +191,25 @@ const BentoGrid = () => {
 								</p> */}
 							</div>
 							<div className={`${styles.grid_r2_c2} ${styles.grid_item}`}>
-								<p className={styles.title}>Credit Wise</p>
-								<p className={styles.description}>
-									Learn, Grow, and Master Your Financial Health
-								</p>
+								<div>
+									<p className={styles.title}>Credit Wise</p>
+									<p className={styles.description}>
+										Navigate credit wisely with our tailored advice and
+										financial foresight.
+									</p>
+								</div>
 
 								<img src="/images/wallet.png" className="img" />
 							</div>
 
 							<div className={`${styles.grid_r2_c2} ${styles.grid_item}`}>
-								<p className={styles.title}>Points Champion</p>
-								<p className={styles.description}>
-									Master the Art of Reward Maximization
-								</p>
+								<div>
+									<p className={styles.title}>Points Champion</p>
+									<p className={styles.description}>
+										Master your rewards game with advanced optimization
+										strategies and expert guidance.
+									</p>
+								</div>
 								<img src="/images/trophy.png" className="img" />
 							</div>
 						</div>
