@@ -163,7 +163,12 @@ const Card = ({ title, description, background, network }) => {
 
 				<div>
 					<div style={{ float: "right" }} className={styles.description}>
-						<Image src={`/images/${network}.png`} width={80} height={80} />
+						<Image
+							src={`/images/${network}.png`}
+							alt={network}
+							width={80}
+							height={80}
+						/>
 					</div>
 				</div>
 			</div>
