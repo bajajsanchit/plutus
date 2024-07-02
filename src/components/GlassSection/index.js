@@ -4,8 +4,8 @@ const GlassSection = () => (
 	<div className={styles.hero_container}>
 		<div className={styles.hero_content}>
 			<h1>
-				Match your wallet to your lifestyle. Discover credit cards that are
-				right for you!
+				Match your wallet to your lifestyle. <br /> Discover credit cards that
+				are right for you!
 			</h1>
 			<p>
 				Navigate the credit card maze with Plutus! Compare your options, enhance

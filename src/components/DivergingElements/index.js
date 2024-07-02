@@ -69,27 +69,31 @@ const DivergingElements = () => {
 				display: "flex",
 				flexDirection: "column",
 				alignItems: "flex-start",
-				minHeight: "200vh",
+				// minHeight: "200vh",
+
 				position: "relative",
 				background: "#f1f1f1",
 			}}
 		>
 			<div
-				style={{
-					position: "sticky",
-					width: "100%",
-					top: "0",
-				}}
+				style={
+					{
+						// position: "sticky",
+						// width: "100%",
+						// top: "0",
+					}
+				}
 			>
 				<div
 					ref={containerRef}
 					style={{
 						display: "flex",
-						height: "100vh",
+						// height: "100vh",
 						width: "100%",
 						justifyContent: "center",
 						alignItems: "center",
 						background: "#000",
+						padding: "5vw 0",
 					}}
 				>
 					{brandsArray.map((brand, index) => (
