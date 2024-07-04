@@ -1,12 +1,12 @@
 const FooterData = [
-	{
-		title: "Credit Cards",
-		links: [
-			{ name: "Cashback", href: "/cashback-credit-cards" },
-			{ name: "Travel", href: "/travel-credit-cards" },
-			{ name: "Lifestyle", href: "/lifestyle-credit-cards" },
-		],
-	},
+	// {
+	// 	title: "Credit Cards",
+	// 	links: [
+	// 		{ name: "Cashback", href: "/cashback-credit-cards" },
+	// 		{ name: "Travel", href: "/travel-credit-cards" },
+	// 		{ name: "Lifestyle", href: "/lifestyle-credit-cards" },
+	// 	],
+	// },
 	{
 		title: "Know More",
 		links: [
