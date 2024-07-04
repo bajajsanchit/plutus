@@ -1,5 +1,5 @@
 .waitlist_container {
-	background-color: #000;
+	background-color: #040404;
 	.form_container {
 		max-width: var(--breakpoint-sm);
 		height: 100vh;
@@ -59,11 +59,36 @@
 					justify-content: center;
 					align-items: center;
 					padding: 0 12px;
+					background-color: #b7edff;
+
+					svg {
+						color: #040404;
+					}
+				}
+
+				.button_disabled {
+					background: #e2884776;
+					width: 100%;
+					display: flex;
+					justify-content: flex-end;
+					align-items: center;
+					transition: 0.3s ease all;
+					color: #040404;
+
+					&:hover {
+						text-decoration: underline;
+					}
+
+					svg {
+						color: #040404;
+						transform: rotate(180deg);
+						margin-left: 8px;
+					}
 				}
 
 				.button_next {
 					width: 100%;
-
+					background: #e28847;
 					display: flex;
 					justify-content: flex-end;
 					align-items: center;

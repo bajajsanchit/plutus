@@ -124,7 +124,15 @@ const WaitlistForm = () => {
 
 								<button
 									type={isLastStep ? "submit" : "button"}
-									className={styles.button_next}
+									className={
+										!isLastStep &&
+										((touched[currentQuestions[step].id] &&
+											errors[currentQuestions[step].id]) ||
+											(!values[currentQuestions[step].id] &&
+												values[currentQuestions[step].id] !== false))
+											? `${styles.button_disabled}`
+											: `${styles.button_next}`
+									}
 									onClick={() => handleSubmit(values)}
 									disabled={
 										!isLastStep &&
