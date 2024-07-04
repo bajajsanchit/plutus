@@ -1,10 +1,22 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import styles from "./styles.module.scss";
+import { useInView } from "react-intersection-observer";
 
 const DivergingElements = () => {
 	const containerRef = useRef(null);
+	const [isVisible, setIsVisible] = useState(false);
+	const { ref: brandRef, inView } = useInView({
+		threshold: 0.2,
+		triggerOnce: true,
+	});
+
+	useEffect(() => {
+		if (inView) {
+			setIsVisible(true);
+		}
+	}, [inView]);
 
 	const useScrollProgress = (ref, offset) => {
 		const { scrollYProgress } = useScroll({
@@ -26,19 +38,18 @@ const DivergingElements = () => {
 		[3, 1.4]
 	);
 
-	const startAnimation = false;
+	// const startAnimation = false;
 
 	const brandsArray = [
 		{ name: "gift", bgColor: "#F5F0FF" },
 		{ name: "makemytrip", bgColor: "#ff7b59" },
 		{ name: "swiggy", bgColor: "#fc8019" },
 		{ name: "zomato", bgColor: "#cb202d" },
-		{ name: "bookmyshow", bgColor: "#f79b21" },
-		{ name: "tanishq", bgColor: "#bfa76f" },
+		{ name: "bookmyshow", bgColor: "#ff7b59" },
+		{ name: "croma", bgColor: "#bfa76f" },
 		{ name: "mariott", bgColor: "#85d7ff" },
-		{ name: "bookmyshow", bgColor: "#f79b21" },
-		{ name: "swiggy", bgColor: "#fc8019" },
-		{ name: "zomato", bgColor: "#cb202d" },
+		{ name: "booking", bgColor: "#fc8019" },
+		// { name: "zomato", bgColor: "#cb202d" },
 	];
 
 	const getRotation = (index) => {
@@ -53,8 +64,8 @@ const DivergingElements = () => {
 	};
 
 	const getPosition = (index) => {
-		const angle = (360 / brandsArray.length) * index; // distribute angles evenly
-		const radius = 275; // radius of the circle
+		const angle = (360 / brandsArray.length) * index;
+		const radius = 300;
 		return {
 			x: radius * Math.cos((angle * Math.PI) / 180),
 			y: radius * Math.sin((angle * Math.PI) / 180),
@@ -69,35 +80,25 @@ const DivergingElements = () => {
 				display: "flex",
 				flexDirection: "column",
 				alignItems: "flex-start",
-				// minHeight: "200vh",
-
 				position: "relative",
 				background: "#f1f1f1",
 			}}
 		>
-			<div
-				style={
-					{
-						// position: "sticky",
-						// width: "100%",
-						// top: "0",
-					}
-				}
-			>
+			<div>
 				<div
 					ref={containerRef}
 					style={{
 						display: "flex",
-						// height: "100vh",
 						width: "100%",
 						justifyContent: "center",
 						alignItems: "center",
 						background: "#000",
-						padding: "5vw 0",
+						padding: "7vw 0",
 					}}
 				>
 					{brandsArray.map((brand, index) => (
 						<motion.div
+							ref={brandRef}
 							key={index}
 							initial={{
 								scale: 1,
@@ -106,7 +107,7 @@ const DivergingElements = () => {
 								rotate: getRotation(index),
 							}}
 							animate={
-								startAnimation && {
+								isVisible && {
 									scale: 1,
 									x: getPosition(index).x,
 									y: getPosition(index).y,
@@ -117,12 +118,12 @@ const DivergingElements = () => {
 								type: "spring",
 								ease: "easeOut",
 								duration: 2.5,
-								delay: index === 0 ? totalDelay : 0.1 * index, // First item has maximum delay
+								delay: index === 0 ? totalDelay : 0.1 * index,
 							}}
 							style={{
-								scale: transformedScaleProgress,
-								width: `8vw`,
-								height: `8vw`,
+								// scale: transformedScaleProgress,
+								width: `9vw`,
+								height: `9vw`,
 								display: "flex",
 								justifyContent: "center",
 								alignItems: "center",
@@ -131,9 +132,15 @@ const DivergingElements = () => {
 								boxShadow: "0 2px 5px rgba(0,0,0,0.05)",
 								borderRadius: "20px",
 								zIndex: brandsArray.length - index,
+								overflow: "hidden",
+								padding: index === 0 ? "0.5em" : "",
 							}}
 						>
-							{index !== 8 ? "" : brand.name}
+							<img
+								src={`/images/${brand.name}.png`}
+								width={"100%"}
+								height={"100%"}
+							/>
 						</motion.div>
 					))}
 
