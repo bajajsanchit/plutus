@@ -204,17 +204,27 @@
 					}
 				}
 
-				.special_one {
-					background-color: #e38847;
-					p {
-						font-size: 3em;
-						font-weight: 700;
-						font-family: var(--font-space);
-					}
-				}
+				// .special_one {
+				// 	background-color: #e38847;
+				// 	p {
+				// 		font-size: 3em;
+				// 		font-weight: 700;
+				// 		font-family: var(--font-space);
+				// 	}
+				// }
 
 				.special_two {
 					background-color: #e38847;
+
+					p {
+						font-size: 3vw;
+						font-weight: 800;
+						font-family: var(--font-space);
+						line-height: 1.2;
+						// font-style: italic;
+						margin: auto;
+						max-width: 80%;
+					}
 				}
 			}
 		}

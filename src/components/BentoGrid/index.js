@@ -148,6 +148,10 @@ const BentoGrid = () => {
 										Your Ultimate Card Selector: Compare, Choose, Celebrate
 									</p> */}
 									{/* <img src="/images/megaphone.png" className="img" /> */}
+									<p>
+										Step up your credit card game and make every transaction, a
+										celebration.
+									</p>
 								</div>
 								<div className={`${styles.grid_r1_c2_r2}`}>
 									<div
@@ -184,8 +188,18 @@ const BentoGrid = () => {
 							<div
 								className={`${styles.grid_r2_c1} ${styles.grid_item}  ${styles.special_one}`}
 							>
-								{/* <p>More Rewards, Less Effort</p> */}
-								{/* <p className={styles.title}>Rewards Masterclass</p>
+								<div>
+									<p className={styles.title}>Safe & Sound</p>
+									<p className={styles.description}>
+										We respect privacy and use state-of-the-art technology to
+										protect your data.
+									</p>
+								</div>
+
+								<img src="/images/lock.png" className="img" />
+
+								{/* <p>Safe & Sound</p>
+								<p className={styles.title}>Rewards Masterclass</p>
 								<p className={styles.description}>
 									Master the Art of Reward Maximization
 								</p> */}
