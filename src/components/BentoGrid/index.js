@@ -100,7 +100,7 @@ const BentoGrid = () => {
 					</motion.p>
 
 					<div style={{ display: "flex", width: "100%" }}>
-						<button className={styles.button}>Join Waitlist</button>
+						<button className={styles.button}>Get Early Access</button>
 						<button className={styles.know}>Know More</button>
 					</div>
 				</div>

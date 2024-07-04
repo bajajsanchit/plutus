@@ -35,7 +35,7 @@ const Header = () => {
 
 				<div className={styles.cta_container}>
 					<button>
-						<Link href="/waitlist">Join Waitlist</Link>
+						<Link href="/waitlist">Get Early Access</Link>
 					</button>
 				</div>
 			</nav>
