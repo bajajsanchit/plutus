@@ -2,7 +2,8 @@
 	padding: 48px var(--space-md);
 	overflow: hidden;
 	position: relative;
-	color: #000;
+	color: #fff;
+	background-color: #040404;
 
 	.footer_logo {
 		position: absolute;
@@ -57,7 +58,6 @@
 					font-weight: 600;
 					margin-bottom: 16px;
 					text-transform: uppercase;
-					color: #000;
 				}
 
 				.link_container {
@@ -71,7 +71,7 @@
 						background: transparent;
 						border: none;
 						font-family: var(--font-jost);
-						color: #000;
+						color: #ededed;
 						font-size: 16px;
 						cursor: pointer;
 						transition: 0.3s ease all;
