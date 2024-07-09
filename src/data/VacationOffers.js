@@ -7,14 +7,14 @@ const marriottProperties = [
 	// 		"https://cf.bstatic.com/xdata/images/hotel/max1024x768/461651190.jpg?k=8673bb4822f3ac0fc9a9b1a9fc3d830a4d2132cfd5e5a1375234917bcc5e843a&o=&hp=1",
 	// },
 	{
-		title: "The Westin Hyderabad Mindspace",
+		title: "The Westin Hyderabad",
 		pointsNeeded: 25000,
 		description: "Luxury hotel in Hyderabad's IT hub.",
 		image:
 			"https://cf.bstatic.com/xdata/images/hotel/max1024x768/433716392.jpg?k=03757ae51e82d38c5f3f4a827206f7a2d878e8b61fb936c5c426101d13c5868d&o=&hp=1",
 	},
 	{
-		title: "Renaissance Mumbai Convention Centre Hotel",
+		title: "Renaissance Mumbai",
 		pointsNeeded: 25000,
 		description: "Luxury hotel with views of Powai Lake.",
 		image:
@@ -84,7 +84,7 @@ const marriottProperties = [
 	// 		"https://cf.bstatic.com/xdata/images/hotel/max1024x768/459766077.jpg?k=f5ab44e69e56f475fce64c138c0a7b589c58679620a217c905bd825f71ae3598&o=&hp=1",
 	// },
 	{
-		title: "Sheraton Grand Chennai Resort & Spa",
+		title: "Sheraton Grand Chennai",
 		pointsNeeded: 25000,
 		description: "Beachfront resort offering luxury in Chennai.",
 		image:
@@ -98,7 +98,7 @@ const marriottProperties = [
 			"https://cf.bstatic.com/xdata/images/hotel/max1024x768/496824753.jpg?k=a46e04d0cfcf88186ae80485d7ced1fe19188bdfc9d65557518a4938f0ac437e&o=&hp=1",
 	},
 	{
-		title: "Renaissance Bengaluru Race Course Hotel",
+		title: "Renaissance Bengaluru",
 		pointsNeeded: 20000,
 		description: "Stylish hotel overlooking Bengaluru Race Course.",
 		image:

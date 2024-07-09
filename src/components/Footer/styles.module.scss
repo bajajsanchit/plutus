@@ -2,10 +2,7 @@
 	padding: 48px var(--space-md);
 	overflow: hidden;
 	position: relative;
-	// background-color: #000;
 	color: #000;
-	// background-color: black;
-	// color: white !important;
 
 	.footer_logo {
 		position: absolute;
@@ -50,7 +47,7 @@
 
 		.links {
 			display: grid;
-			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-columns: 1fr 1fr;
 
 			.column {
 				p {

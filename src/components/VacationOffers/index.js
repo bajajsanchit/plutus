@@ -1,10 +1,10 @@
 "use client";
-import { useRef, useEffect, useState } from "react";
+import { useEffect } from "react";
 import Image from "next/image";
 //styles
 import styles from "./styles.module.scss";
 //utils
-import { motion, useScroll, useTransform, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 //data
 import marriottProperties from "@/data/VacationOffers";
@@ -24,6 +24,7 @@ const VacationOffers = () => {
 	const subarrays = createSubarrays(marriottProperties);
 
 	const controls = useAnimation();
+
 	const [fadeInRef, inView] = useInView({
 		threshold: 0.2,
 		triggerOnce: true,
@@ -37,17 +38,6 @@ const VacationOffers = () => {
 		}
 	}, [controls, inView]);
 
-	const variants = {
-		visible: {
-			opacity: 1,
-			transition: { duration: 0.8, ease: "easeOut" },
-		},
-		hidden: {
-			opacity: 0,
-			transition: { duration: 0.8, ease: "easeIn" },
-		},
-	};
-
 	return (
 		<div className={styles.vacation_container}>
 			<div className={styles.parallax_scroll_container}>
@@ -58,22 +48,11 @@ const VacationOffers = () => {
 
 			<div className={styles.parallax}>
 				<div className={styles.vacation_container_text}>
-					<motion.p
-						ref={fadeInRef}
-						initial="hidden"
-						animate={controls}
-						variants={variants}
-						className={styles.title}
-					>
+					<p className={styles.title}>
 						{"Unlock luxury stays with your credit card reward points."}
-					</motion.p>
+					</p>
 
-					<p
-						style={{
-							color: "#bcbcbc",
-						}}
-						className={styles.text}
-					>
+					<p className={styles.text}>
 						{
 							"From exotic getaways to lavish suites, our super saver deals let you experience the best without breaking the bank. Start your journey to unforgettable memories today!"
 						}
