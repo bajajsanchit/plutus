@@ -1,11 +1,6 @@
-"use client";
-import { useEffect } from "react";
 import Image from "next/image";
 //styles
 import styles from "./styles.module.scss";
-//utils
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 //data
 import marriottProperties from "@/data/VacationOffers";
 
@@ -22,21 +17,6 @@ const VacationOffers = () => {
 	}
 
 	const subarrays = createSubarrays(marriottProperties);
-
-	const controls = useAnimation();
-
-	const [fadeInRef, inView] = useInView({
-		threshold: 0.2,
-		triggerOnce: true,
-	});
-
-	useEffect(() => {
-		if (inView) {
-			controls.start("visible");
-		} else {
-			controls.start("hidden");
-		}
-	}, [controls, inView]);
 
 	return (
 		<div className={styles.vacation_container}>
