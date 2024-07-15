@@ -132,13 +132,7 @@ const CreditCards = [
 		type: "Premium",
 		backgroundColor: "#FDBA74", // Bright pastel orange
 	},
-	{
-		bank: "HDFC Bank",
-		card: "HDFC Diners Black Metal Credit Card",
-		network: "Diners Club",
-		type: "Premium",
-		backgroundColor: "#BFDBFE", // Bright pastel blue
-	},
+
 	{
 		bank: "SBI",
 		card: "SBI SimplyCLICK Credit Card",

@@ -7,7 +7,7 @@ const Header = () => {
 			<nav className={styles.nav}>
 				<div className={styles.logo_container}>
 					<svg
-						width="150"
+						width="125"
 						viewBox="0 0 614 168"
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
@@ -17,20 +17,6 @@ const Header = () => {
 							fill="white"
 						/>
 					</svg>
-				</div>
-
-				<div className={styles.nav_items}>
-					<button>
-						<Link href="/about">Explore</Link>
-					</button>
-
-					<button>
-						<Link href="/features">Rewards & Deals</Link>
-					</button>
-
-					<button>
-						<Link href="/discover">Learn</Link>
-					</button>
 				</div>
 
 				<div className={styles.cta_container}>

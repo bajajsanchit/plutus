@@ -1,50 +1,30 @@
 .header {
+	background-color: rgba(0, 0, 0, 0.1);
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	backdrop-filter: blur(12px);
+
 	.nav {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 1.8em;
-
-		.nav_items {
-			position: relative;
-
-			.nav_data_container {
-				position: absolute;
-				border-radius: 16px;
-				width: 100%;
-				margin-top: 12px;
-
-				p {
-					padding: 20px;
-					font-family: var(--font-jost);
-				}
-			}
-
-			button {
-				margin: 0 var(--space-sm);
-				background: transparent;
-				border: none;
-
-				a {
-					font-size: var(--font-size-base);
-					text-decoration: none;
-					color: #ededed;
-					font-family: var(--font-space);
-				}
-			}
-		}
+		padding: 1.2em 1.5em;
 
 		.cta_container {
 			button {
-				background: transparent;
-				padding: var(--space-xs) var(--space-sm);
+				cursor: pointer;
+				background: #e56d26;
+				padding: 14px 20px;
 				border: none;
+				border-radius: 4px;
 			}
 
 			a {
-				font-size: var(--font-size-large);
-				color: #ededed;
-				font-weight: var(--font-weight-bold);
+				text-decoration: none;
+				font-size: 16px;
+				color: #040404;
+				font-weight: 700;
 				font-family: var(--font-space);
 			}
 		}
