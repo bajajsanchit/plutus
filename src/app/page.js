@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import WaitlistForm from "@/components/WaitlistForm";
 import styles from "./page.module.scss";
 //components
-import Header from "@/components/Header";
+import AppHeader from "@/components/AppHeader";
 import Footer from "@/components/Footer";
 import BentoGrid from "@/components/BentoGrid";
 import InitialLoader from "@/components/InitialLoader";
@@ -39,7 +39,7 @@ export default function Home() {
 
 	return (
 		<main className={styles.main}>
-			{/* <Header /> */}
+			<AppHeader />
 
 			<HeroSection />
 			<BentoGrid />

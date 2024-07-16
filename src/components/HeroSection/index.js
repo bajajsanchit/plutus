@@ -8,9 +8,9 @@ export default function Home() {
 		<div>
 			<main className={styles.main}>
 				<BackgroundBlobs />
-				<div className={styles.header}>
+				{/* <div className={styles.header}>
 					<Header />
-				</div>
+				</div> */}
 				<div className={styles.content}>
 					<GlassSection />
 				</div>

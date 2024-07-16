@@ -3,6 +3,7 @@
 import styles from "./styles.module.scss";
 //util
 import Marquee from "react-fast-marquee";
+import Image from "next/image";
 //data
 import CreditCards from "@/data/CardData";
 
@@ -68,7 +69,7 @@ const Card = ({ title, description, background, network }) => {
 
 				<div>
 					<div style={{ float: "right" }} className={styles.description}>
-						<img
+						<Image
 							src={`/images/${network}.png`}
 							alt={network}
 							width={80}

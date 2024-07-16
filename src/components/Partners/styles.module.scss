@@ -19,6 +19,7 @@
 				display: flex;
 				gap: 1vw;
 				margin-right: 1vw;
+				overflow: hidden;
 
 				.card_container {
 					.card {
@@ -31,6 +32,7 @@
 						width: 30vw;
 						display: flex;
 						flex-direction: column;
+						// backdrop-filter: blur(10px);
 
 						.image_container {
 							position: relative;
