@@ -14,6 +14,7 @@ import Partners from "@/components/Partners";
 //utils
 import Lenis from "lenis";
 import DivergingElements from "@/components/DivergingElements";
+import Announcement from "@/components/Announcement";
 
 export default function Home() {
 	useEffect(() => {
@@ -52,6 +53,8 @@ export default function Home() {
 			<Partners />
 
 			<WaitlistForm />
+
+			<Announcement />
 
 			<Footer />
 		</main>
