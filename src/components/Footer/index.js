@@ -19,7 +19,7 @@ const Footer = () => {
 						powerhouse.
 					</p>
 					<p className={styles.meaning}>
-						*<span>Greek God of Wealth</span> often associated with abundance
+						<span>*Greek God of Wealth</span> often associated with abundance
 						and prosperity. Join us, and find deals divine enough to make Zeus
 						jealous.
 					</p>
