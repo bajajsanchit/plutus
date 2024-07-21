@@ -99,7 +99,7 @@ const WebMockup = () => {
 					</div>
 
 					<div className={styles.image}>
-						<img src={"/images/plutus-imac-blue.png"} />
+						<img src={"/images/plutus-imac-classic.png"} />
 					</div>
 				</div>
 
