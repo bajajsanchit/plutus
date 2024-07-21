@@ -40,6 +40,55 @@
 			}
 		}
 
+		.types {
+			max-width: var(--breakpoint-md);
+			margin: 50px auto;
+			display: grid;
+			// grid-template-columns: 25% 25% 25% 25%;
+			grid-template-columns: 1fr 1fr 1fr;
+
+			.box {
+				display: flex;
+				flex-direction: column-reverse;
+				justify-content: flex-end;
+				align-items: center;
+				padding: 30px;
+
+				.content {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					.title {
+						font-family: var(--font-jost);
+						font-weight: 700;
+						font-size: 14px;
+						padding: 4px 8px;
+						color: #e56d27;
+						background-color: rgba($color: #e56d27, $alpha: 0.3);
+						border: 1px solid rgba($color: #e56d27, $alpha: 0.4);
+						border-radius: 4px;
+						text-transform: uppercase;
+						margin: 16px 0;
+						text-align: center;
+					}
+
+					.text {
+						text-align: center;
+						color: #111111;
+						line-height: 1.5;
+						font-family: var(--font-jost);
+					}
+				}
+
+				.img {
+					img {
+						width: 200px;
+					}
+				}
+			}
+		}
+
 		.content > div {
 			.text {
 				width: 90%;

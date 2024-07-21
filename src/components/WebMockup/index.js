@@ -8,9 +8,10 @@ const WebMockup = () => {
 				<div className={styles.integrations}>
 					<div className={styles.content}>
 						<div className={styles.title}>
-							<span>Rolling out soon</span>
+							<span>EVERYTHING IS COVERED</span>
 							<p>
-								The credit card shopping experience you’ve been waiting for.
+								We help you find a credit card for every transaction of life.
+								{/* The credit card shopping experience you’ve been waiting for. */}
 							</p>
 						</div>
 
@@ -25,6 +26,62 @@ const WebMockup = () => {
 								snag exclusive deals. Spend smarter, save bigger—experience the
 								best of both worlds with Plutus.
 							</p>
+						</div>
+					</div>
+				</div>
+
+				<div className={styles.types}>
+					{/* <div className={styles.box}>
+						<div className={styles.content}>
+							<div className={styles.title}>Utility</div>
+							<div className={styles.text}>Utility</div>
+						</div>
+
+						<div className={styles.img}>
+							<img src="/images/room-gym.png" />
+						</div>
+					</div> */}
+
+					<div className={styles.box}>
+						<div className={styles.content}>
+							<div className={styles.title}>Dining</div>
+							<div className={styles.text}>
+								Everyone deserves a fun weekend! Reserve your spot at locations
+								like Dear Donna, Miso Sexy, Diablo and get upto 20% off on your
+								bill amount.
+							</div>
+						</div>
+
+						<div className={styles.img}>
+							<img src="/images/room-fine-dine.png" />
+						</div>
+					</div>
+
+					<div className={styles.box}>
+						<div className={styles.content}>
+							<div className={styles.title}>Insurance</div>
+							<div className={styles.text}>
+								You read that right! We help you earn reward points for utility
+								(electricity, gas etc.) and insurance bill payments.
+							</div>
+						</div>
+
+						<div className={styles.img}>
+							<img src="/images/room-hospital.png" />
+						</div>
+					</div>
+
+					<div className={styles.box}>
+						<div className={styles.content}>
+							<div className={styles.title}>Grocery</div>
+							<div className={styles.text}>
+								Make grocery runs fun! Earn upto 5x reward point by shopping on
+								Amazon Fresh, Jio Mart, Instamart and many more.
+							</div>
+						</div>
+
+						<div className={styles.img}>
+							<img src="/images/room-grocery.png" />
 						</div>
 					</div>
 				</div>
