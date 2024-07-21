@@ -45,6 +45,7 @@
 				font-weight: 400;
 				font-size: 20px;
 				font-family: var(--font-jost);
+				color: #ededed;
 
 				@media (max-width: 800px) {
 					font-size: 16px;
@@ -63,6 +64,7 @@
 				font-family: var(--font-space);
 				margin-bottom: 0px;
 				width: 80%;
+				color: #bcbcbc;
 
 				span {
 					color: #e56d27;
@@ -87,6 +89,7 @@
 					font-weight: 600;
 					margin-bottom: 16px;
 					text-transform: uppercase;
+					color: #ededed;
 
 					@media (max-width: 600px) {
 						text-align: left;
@@ -112,7 +115,7 @@
 						background: transparent;
 						border: none;
 						font-family: var(--font-jost);
-						color: #ededed;
+						color: #bcbcbc;
 						font-size: 16px;
 						cursor: pointer;
 						transition: 0.3s ease all;

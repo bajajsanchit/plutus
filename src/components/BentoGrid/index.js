@@ -1,14 +1,17 @@
 //styles
 import styles from "./styles.module.scss";
+//util
+import Image from "next/image";
 
 const BentoGrid = () => {
 	return (
 		<div className={styles.features_container}>
 			<div className={styles.parallax}>
 				<div className={styles.features_container_text}>
-					<p className={styles.title}>
-						{"Your gateway to extraordinary privileges starts here."}
-					</p>
+					<div className={styles.title}>
+						<div>Rolling out soon</div>
+						The credit card shopping experience you’ve been waiting for.
+					</div>
 
 					<div>
 						<p
@@ -17,15 +20,10 @@ const BentoGrid = () => {
 							}}
 							className={styles.text}
 						>
-							{
-								"Step into a world where every credit card transaction is a step towards unparalleled savings. With Plutus, compare leading credit cards effortlessly, maximize your reward points, and unlock exclusive deals that make every spend worthwhile. Experience the joy of smart spending and saving simultaneously—because you deserve the best of both worlds."
-							}
+							Effortlessly compare top credit cards, maximize rewards, and snag
+							exclusive deals. Spend smarter, save bigger—experience the best of
+							both worlds with Plutus.
 						</p>
-
-						<div style={{ display: "flex", width: "100%" }}>
-							<button className={styles.button}>Get Early Access</button>
-							<button className={styles.know}>Know More</button>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -38,10 +36,29 @@ const BentoGrid = () => {
 								<p className={styles.title}>Max Rewards</p>
 								<p className={styles.description}>
 									Unlock unparalleled rewards with strategies and our
-									comprehensive calculator.
+									calculators.
 								</p>
 							</div>
-							<img src="/images/deposit.png" className="img" />
+							{/* <Image
+								width={750}
+								height={750}
+								src="/images/deposit.png"
+								className="img"
+							/> */}
+
+							<video
+								width={"175px"}
+								style={{ margin: "0px auto" }}
+								// height={"auto"}
+								// src="/images/shopping-cart.png"
+								className="img"
+								autoPlay
+								loop
+								muted
+								playsInline
+							>
+								<source src="/video/plutus-test-vid-1.webm" type="video/webm" />
+							</video>
 						</div>
 
 						<div className={`${styles.grid_r1_c1_r2} ${styles.grid_item}`}>
@@ -52,7 +69,13 @@ const BentoGrid = () => {
 									exclusive offers.
 								</p>
 							</div>
-							<img src="/images/magnet.png" className="img" />
+
+							<Image
+								width={750}
+								height={750}
+								src="/images/magnet.png"
+								className="img"
+							/>
 						</div>
 					</div>
 					<div className={`${styles.grid_r1_c2}`}>
@@ -63,18 +86,20 @@ const BentoGrid = () => {
 									<p className={styles.description}>
 										Your Ultimate Card Selector: Compare, Choose, Celebrate
 									</p> */}
-							{/* <img src="/images/megaphone.png" className="img" /> */}
-							<p>
-								Step up your credit card game and make every transaction, a
-								celebration.
-							</p>
+							{/* <Image width={750} height={750} src="/images/megaphone.png" className="img" /> */}
+							<div>
+								<p>GretYour New Financial Ally</p>
+							</div>
+
+							<img src="images/iphone-white.png" />
 						</div>
+
 						<div className={`${styles.grid_r1_c2_r2}`}>
 							<div
 								className={`${styles.grid_r1_c2_r2_c1} ${styles.grid_item} ${styles.grid_logo} `}
 							>
 								<svg
-									width="80%"
+									width="70%"
 									viewBox="0 0 614 168"
 									fill="none"
 									xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +118,22 @@ const BentoGrid = () => {
 										insider tips.
 									</p>
 								</div>
-								<img src="/images/shopping-cart.png" className="img" />
+								<video
+									width={"180px"}
+									style={{ margin: "0px auto" }}
+									// height={"auto"}
+									// src="/images/shopping-cart.png"
+									className="img"
+									autoPlay
+									loop
+									muted
+									playsInline
+								>
+									<source
+										src="/video/plutus-test-vid-0.webm"
+										type="video/webm"
+									/>
+								</video>
 							</div>
 						</div>
 					</div>
@@ -110,7 +150,12 @@ const BentoGrid = () => {
 							</p>
 						</div>
 
-						<img src="/images/lock.png" className="img" />
+						<Image
+							width={750}
+							height={750}
+							src="/images/lock.png"
+							className="img"
+						/>
 
 						{/* <p>Safe & Sound</p>
 								<p className={styles.title}>Rewards Masterclass</p>
@@ -127,18 +172,41 @@ const BentoGrid = () => {
 							</p>
 						</div>
 
-						<img src="/images/wallet.png" className="img" />
+						{/* <Image
+							width={750}
+							height={750}
+							src="/images/wallet.png"
+							className="img"
+						/> */}
+
+						<video
+							width={"180px"}
+							style={{ margin: "0 auto" }}
+							// height={"auto"}
+							// src="/images/shopping-cart.png"
+							className="img"
+							autoPlay
+							loop
+							muted
+							playsInline
+						>
+							<source src="/video/plutus-test-vid-2.webm" type="video/webm" />
+						</video>
 					</div>
 
 					<div className={`${styles.grid_r2_c2} ${styles.grid_item}`}>
 						<div>
 							<p className={styles.title}>Points Champion</p>
 							<p className={styles.description}>
-								Master your rewards game with advanced optimization strategies
-								and expert guidance.
+								Master your rewards game with advanced optimization strategies .
 							</p>
 						</div>
-						<img src="/images/trophy.png" className="img" />
+						<Image
+							width={750}
+							height={750}
+							src="/images/trophy.png"
+							className="img"
+						/>
 					</div>
 				</div>
 			</div>

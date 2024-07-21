@@ -8,7 +8,7 @@ import QuestionCard from "../QuestionCard";
 import { Formik, Form } from "formik";
 //util
 import { createValidationSchema } from "@/utils/createValidationSchema";
-import { easeIn, motion } from "framer-motion";
+import { motion } from "framer-motion";
 //data
 import WaitlistQuestions from "@/data/WaitlistQuestions";
 
@@ -52,14 +52,6 @@ const WaitlistForm = () => {
 		animate: {
 			opacity: 1,
 			x: 0,
-			transition: {
-				easeIn,
-				duration: 0.1,
-				type: "spring",
-				stiffness: 600,
-				damping: 20,
-				mass: 1,
-			},
 		},
 	};
 

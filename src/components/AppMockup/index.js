@@ -15,8 +15,7 @@ const AppMockup = () => {
 					<p className={styles.heading_lg}>
 						Plutus revolutionizes the way you manage your credit cards. Compare
 						top offers, maximize rewards, and access exclusive deals tailored to
-						your needs. Join Plutus today and take control of your financial
-						future with confidence.
+						your needs.
 					</p>
 					<p className={styles.heading_md}>Get Early Access</p>
 				</div>

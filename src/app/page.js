@@ -15,6 +15,10 @@ import Partners from "@/components/Partners";
 import Lenis from "lenis";
 import DivergingElements from "@/components/DivergingElements";
 import Announcement from "@/components/Announcement";
+import Ripple from "@/components/RippleEffect";
+import OrbitingCircles from "@/components/OrbitingCircles";
+import AppMockup from "@/components/AppMockup";
+import WebMockup from "@/components/WebMockup";
 
 export default function Home() {
 	useEffect(() => {
@@ -43,7 +47,9 @@ export default function Home() {
 			<AppHeader />
 
 			<HeroSection />
+			<AppMockup />
 			<BentoGrid />
+			<WebMockup />
 			<VacationOffers />
 
 			{/* <div style={{ height: "140vh" }}></div> */}
@@ -51,6 +57,8 @@ export default function Home() {
 			<DivergingElements />
 
 			<Partners />
+
+			{/* <Ripple mainCircleSize={350} mainCircleOpacity={0.5} numCircles={6} /> */}
 
 			<WaitlistForm />
 

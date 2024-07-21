@@ -1,7 +1,7 @@
 const WaitlistQuestions = [
 	{
 		id: "fullName",
-		question: "Kick things off by telling us your name.  👋",
+		question: "Kick things off by telling us your name",
 		placeholder: "John Doe",
 		type: "text",
 		validationType: "string",
