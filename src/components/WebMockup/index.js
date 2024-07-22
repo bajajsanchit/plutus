@@ -232,7 +232,6 @@ const CardStack = ({ items, offset, scaleFactor }) => {
 							top: index * -CARD_OFFSET,
 							scale: 1 - index * SCALE_FACTOR, // decrease scale for cards that are behind
 							zIndex: cards.length - index, // decrease z-index for the cards that are behind
-							opacity: 0.2 * (cards.length - index),
 						}}
 					>
 						<div className={styles.content_container}>

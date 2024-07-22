@@ -12,7 +12,7 @@ import HeroSection from "@/components/HeroSection";
 import VacationOffers from "@/components/VacationOffers";
 import Partners from "@/components/Partners";
 //utils
-import Lenis from "lenis";
+// import Lenis from "lenis";
 import DivergingElements from "@/components/DivergingElements";
 import Announcement from "@/components/Announcement";
 import Ripple from "@/components/RippleEffect";
@@ -21,22 +21,22 @@ import AppMockup from "@/components/AppMockup";
 import WebMockup from "@/components/WebMockup";
 
 export default function Home() {
-	useEffect(() => {
-		const lenis = new Lenis();
+	// useEffect(() => {
+	// 	const lenis = new Lenis();
 
-		function raf(time) {
-			lenis.raf(time);
-			requestAnimationFrame(raf);
-		}
+	// 	function raf(time) {
+	// 		lenis.raf(time);
+	// 		requestAnimationFrame(raf);
+	// 	}
 
-		requestAnimationFrame(raf);
-	}, []);
+	// 	requestAnimationFrame(raf);
+	// }, []);
 
-	const [isLoading, setIsLoading] = useState(true);
+	// const [isLoading, setIsLoading] = useState(true);
 
-	const handleLoaderComplete = () => {
-		setIsLoading(false);
-	};
+	// const handleLoaderComplete = () => {
+	// 	setIsLoading(false);
+	// };
 
 	if (isLoading) {
 		return <InitialLoader onComplete={handleLoaderComplete} />;
