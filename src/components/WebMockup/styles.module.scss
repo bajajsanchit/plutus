@@ -171,6 +171,26 @@
 			margin-top: 60px;
 			margin-bottom: 480px;
 
+			.red {
+				background-color: rgba($color: #fde68a, $alpha: 0.6);
+			}
+
+			.blue {
+				background-color: rgba($color: #a7f3d0, $alpha: 0.6);
+			}
+
+			.yellow {
+				background-color: rgba($color: #bfdbfe, $alpha: 0.6);
+			}
+
+			.orange {
+				background-color: rgba($color: #fecaca, $alpha: 0.6);
+			}
+
+			.green {
+				background-color: rgba($color: #c4b5fd, $alpha: 0.6);
+			}
+
 			.cards {
 				padding: 50px;
 				display: flex;
@@ -190,13 +210,13 @@
 						display: grid;
 						grid-template-columns: 1fr 1fr;
 						// background-color: rgba($color: #e56d27, $alpha: 0.3);
-						box-shadow: 0px 5px 20px 10px rgba(0, 0, 0, 0.1);
+						box-shadow: 0px 0px 15px 5px rgba(#040404, 0.08);
 						// border: 1px solid rgba($color: #e56d27, $alpha: 0.4);
 						padding: 40px 30px;
 						width: 80%;
 						height: 420px;
 						border-radius: 1vw;
-						// backdrop-filter: blur(12px);
+						backdrop-filter: blur(12px);
 
 						.bank {
 							color: #040404;

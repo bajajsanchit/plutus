@@ -7,49 +7,44 @@ import styles from "./styles.module.scss";
 const WebMockup = () => {
 	const sampleItems = [
 		{
-			index: 1,
+			index: "1",
 			bank: "SBI",
 			card: "SBI Cashback Card",
 			network: "Visa",
 			type: "Cashback",
 			backgroundColor: "#FDE68A", // Bright pastel yellow
-			color: "styles.yellow",
 		},
 		{
-			index: 2,
+			index: "2",
 			bank: "ICICI Bank",
 			card: "Amazon Pay ICICI Bank Credit Card",
 			network: "Visa",
 			type: "Cashback",
 			backgroundColor: "#A7F3D0", // Bright pastel mint
-			color: "styles.mint",
 		},
 		{
-			index: 3,
+			index: "3",
 			bank: "HDFC Bank",
 			card: "HDFC Millennia Credit Card",
 			network: "Visa",
 			type: "Cashback",
 			backgroundColor: "#BFDBFE", // Bright pastel blue
-			color: "styles.blue",
 		},
 		{
-			index: 4,
+			index: "4",
 			bank: "Axis Bank",
 			card: "Axis Bank Magnus Credit Card",
 			network: "Visa",
 			type: "Premium",
 			backgroundColor: "#FECACA", // Bright pastel red
-			color: "styles.red",
 		},
 		{
-			index: 5,
+			index: "5",
 			bank: "Standard Chartered",
 			card: "Standard Chartered Ultimate Credit Card",
 			network: "Visa",
 			type: "Rewards",
 			backgroundColor: "#C4B5FD", // Bright pastel purple
-			color: "styles.purple",
 		},
 	];
 
@@ -194,6 +189,24 @@ const CardStack = ({ items, offset, scaleFactor }) => {
 		return () => clearInterval(interval);
 	}, []);
 
+	function getColorByIndex(index) {
+		switch (index) {
+			case "5":
+				console.log("hey");
+				return `${styles.red}`;
+			case "1":
+				return `${styles.blue}`;
+			case "2":
+				return `${styles.yellow}`;
+			case "3":
+				return `${styles.orange}`;
+			case "4":
+				return `${styles.green}`;
+			default:
+				return null; // or any default value you'd like to return for indices not listed
+		}
+	}
+
 	const startFlipping = () => {
 		interval = setInterval(() => {
 			setCards((prevCards) => {
@@ -210,10 +223,10 @@ const CardStack = ({ items, offset, scaleFactor }) => {
 				return (
 					<motion.div
 						key={card.index}
-						className={`${styles.card}`}
+						className={`${getColorByIndex(card.index)} ${styles.card}`}
 						style={{
 							transformOrigin: "top center",
-							background: `${card.backgroundColor}`,
+							// background: `${card.backgroundColor}`,
 						}}
 						animate={{
 							top: index * -CARD_OFFSET,
@@ -226,7 +239,11 @@ const CardStack = ({ items, offset, scaleFactor }) => {
 							<div className={styles.bank}>{card.bank}</div>
 							<div>
 								<p className={styles.card_name}>{card.card}</p>
-								<p className={styles.network}>{card.network}</p>
+								<img
+									src={`/images/${card.network}.png`}
+									width={"80px"}
+									height={"80px"}
+								/>
 							</div>
 						</div>
 
@@ -234,7 +251,12 @@ const CardStack = ({ items, offset, scaleFactor }) => {
 							<div className={styles.bank}>{card.bank}</div>
 							<div>
 								<p className={styles.card_name}>{card.card}</p>
-								<p className={styles.network}>{card.network}</p>
+								{/* <p className={styles.network}>{card.network}</p> */}
+								<img
+									src={`/images/${card.network}.png`}
+									width={"80px"}
+									height={"80px"}
+								/>
 							</div>
 						</div>
 					</motion.div>
