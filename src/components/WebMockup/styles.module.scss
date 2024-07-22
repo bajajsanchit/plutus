@@ -45,7 +45,6 @@
 			max-width: var(--breakpoint-md);
 			margin: 50px auto;
 			display: grid;
-			// grid-template-columns: 25% 25% 25% 25%;
 			grid-template-columns: 1fr 1fr 1fr;
 
 			.box {
@@ -105,6 +104,8 @@
 		.imac {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
+			padding: 0px 0;
+			margin: 20px 0 60px;
 
 			.content {
 				max-width: 75%;
@@ -162,6 +163,53 @@
 					width: 85%;
 					height: auto;
 					margin: 0 auto;
+				}
+			}
+		}
+
+		.cards_container {
+			margin-top: 60px;
+			margin-bottom: 480px;
+
+			.cards {
+				padding: 50px;
+				display: flex;
+				flex-direction: column;
+				height: 100%;
+				position: static;
+
+				.card_container {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					position: relative;
+
+					.card {
+						position: absolute;
+						display: grid;
+						grid-template-columns: 1fr 1fr;
+						// background-color: rgba($color: #e56d27, $alpha: 0.3);
+						box-shadow: 0px 5px 20px 10px rgba(0, 0, 0, 0.1);
+						// border: 1px solid rgba($color: #e56d27, $alpha: 0.4);
+						padding: 40px 30px;
+						width: 80%;
+						height: 420px;
+						border-radius: 1vw;
+						// backdrop-filter: blur(12px);
+
+						.bank {
+							color: #040404;
+							font-weight: 700;
+							font-size: 18px;
+						}
+
+						.card_name {
+							color: #040404;
+							font-weight: 500;
+							font-size: 16px;
+						}
+					}
 				}
 			}
 		}

@@ -1,7 +1,58 @@
+"use client";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 //styles
 import styles from "./styles.module.scss";
 
 const WebMockup = () => {
+	const sampleItems = [
+		{
+			index: 1,
+			bank: "SBI",
+			card: "SBI Cashback Card",
+			network: "Visa",
+			type: "Cashback",
+			backgroundColor: "#FDE68A", // Bright pastel yellow
+			color: "styles.yellow",
+		},
+		{
+			index: 2,
+			bank: "ICICI Bank",
+			card: "Amazon Pay ICICI Bank Credit Card",
+			network: "Visa",
+			type: "Cashback",
+			backgroundColor: "#A7F3D0", // Bright pastel mint
+			color: "styles.mint",
+		},
+		{
+			index: 3,
+			bank: "HDFC Bank",
+			card: "HDFC Millennia Credit Card",
+			network: "Visa",
+			type: "Cashback",
+			backgroundColor: "#BFDBFE", // Bright pastel blue
+			color: "styles.blue",
+		},
+		{
+			index: 4,
+			bank: "Axis Bank",
+			card: "Axis Bank Magnus Credit Card",
+			network: "Visa",
+			type: "Premium",
+			backgroundColor: "#FECACA", // Bright pastel red
+			color: "styles.red",
+		},
+		{
+			index: 5,
+			bank: "Standard Chartered",
+			card: "Standard Chartered Ultimate Credit Card",
+			network: "Visa",
+			type: "Rewards",
+			backgroundColor: "#C4B5FD", // Bright pastel purple
+			color: "styles.purple",
+		},
+	];
+
 	return (
 		<div className={styles.parent}>
 			<div className={styles.container}>
@@ -31,17 +82,6 @@ const WebMockup = () => {
 				</div>
 
 				<div className={styles.types}>
-					{/* <div className={styles.box}>
-						<div className={styles.content}>
-							<div className={styles.title}>Utility</div>
-							<div className={styles.text}>Utility</div>
-						</div>
-
-						<div className={styles.img}>
-							<img src="/images/room-gym.png" />
-						</div>
-					</div> */}
-
 					<div className={styles.box}>
 						<div className={styles.content}>
 							<div className={styles.title}>Dining</div>
@@ -103,26 +143,103 @@ const WebMockup = () => {
 					</div>
 				</div>
 
-				{/* <div className={styles.imac}>
+				<div className={styles.integrations}>
 					<div className={styles.content}>
-						<p className={styles.heading_sm}>Your Financial Ally</p>
-						<p className={styles.text}>The Credit Card Experience</p>
-						<p className={styles.heading_lg}>
-							Plutus revolutionizes the way you manage your credit cards.
-							Compare top offers, maximize rewards, and access exclusive deals
-							tailored to your needs. Join Plutus today and take control of your
-							financial future with confidence.
-						</p>
-						<p className={styles.heading_md}>Get Early Access</p>
-					</div>
+						<div className={styles.title}>
+							<span>Search is over</span>
+							<p>
+								We help you find the credit card that is right for you.
+								{/* The credit card shopping experience you’ve been waiting for. */}
+							</p>
+						</div>
 
-					<div className={styles.image}>
-						<img src={"/images/plutus-mac.png"} />
+						<div>
+							<p
+								style={{
+									color: "#bcbcbc",
+								}}
+								className={styles.text}
+							>
+								Effortlessly compare top credit cards, maximize rewards, and
+								snag exclusive deals. Spend smarter, save bigger—experience the
+								best of both worlds with Plutus.
+							</p>
+						</div>
 					</div>
-				</div> */}
+				</div>
+
+				<div className={styles.cards_container}>
+					<div className={styles.cards}>
+						<div>
+							<CardStack items={sampleItems} offset={15} scaleFactor={0.1} />
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
 };
 
 export default WebMockup;
+
+const CardStack = ({ items, offset, scaleFactor }) => {
+	let interval;
+	const CARD_OFFSET = offset || 10;
+	const SCALE_FACTOR = scaleFactor || 0.06;
+	const [cards, setCards] = useState(items);
+
+	useEffect(() => {
+		startFlipping();
+
+		return () => clearInterval(interval);
+	}, []);
+
+	const startFlipping = () => {
+		interval = setInterval(() => {
+			setCards((prevCards) => {
+				const newArray = [...prevCards]; // create a copy of the array
+				newArray.unshift(newArray.pop()); // move the last element to the front
+				return newArray;
+			});
+		}, 1800);
+	};
+
+	return (
+		<div className={styles.card_container}>
+			{cards.map((card, index) => {
+				return (
+					<motion.div
+						key={card.index}
+						className={`${styles.card}`}
+						style={{
+							transformOrigin: "top center",
+							background: `${card.backgroundColor}`,
+						}}
+						animate={{
+							top: index * -CARD_OFFSET,
+							scale: 1 - index * SCALE_FACTOR, // decrease scale for cards that are behind
+							zIndex: cards.length - index, // decrease z-index for the cards that are behind
+							opacity: 0.2 * (cards.length - index),
+						}}
+					>
+						<div className={styles.content_container}>
+							<div className={styles.bank}>{card.bank}</div>
+							<div>
+								<p className={styles.card_name}>{card.card}</p>
+								<p className={styles.network}>{card.network}</p>
+							</div>
+						</div>
+
+						<div className={styles.content_container}>
+							<div className={styles.bank}>{card.bank}</div>
+							<div>
+								<p className={styles.card_name}>{card.card}</p>
+								<p className={styles.network}>{card.network}</p>
+							</div>
+						</div>
+					</motion.div>
+				);
+			})}
+		</div>
+	);
+};
