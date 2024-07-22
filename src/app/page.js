@@ -38,9 +38,9 @@ export default function Home() {
 	// 	setIsLoading(false);
 	// };
 
-	if (isLoading) {
-		return <InitialLoader onComplete={handleLoaderComplete} />;
-	}
+	// if (isLoading) {
+	// 	return <InitialLoader onComplete={handleLoaderComplete} />;
+	// }
 
 	return (
 		<main className={styles.main}>
