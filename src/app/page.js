@@ -52,13 +52,13 @@ export default function Home() {
 			<BentoGrid />
 			{/* <Globe /> */}
 			<WebMockup />
-			<VacationOffers />
+			{/* <VacationOffers /> */}
 
 			{/* <div style={{ height: "140vh" }}></div> */}
 
-			<DivergingElements />
+			{/* <DivergingElements /> */}
 
-			<Partners />
+			{/* <Partners /> */}
 
 			{/* <Ripple mainCircleSize={350} mainCircleOpacity={0.5} numCircles={6} /> */}
 
