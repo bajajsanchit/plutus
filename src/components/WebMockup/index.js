@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import styles from "./styles.module.scss";
 //components
 import Globe from "../Globe";
+import { AnimatedList } from "@/components/AnimatedList";
 
 const WebMockup = () => {
 	const sampleItems = [
@@ -54,6 +55,39 @@ const WebMockup = () => {
 		<div className={styles.parent}>
 			<div className={styles.container}>
 				<div className={styles.integrations}>
+					<div className={styles.content}>
+						<div className={styles.title}>
+							<span>Search is over</span>
+							<p>
+								We help you find the credit card that is right for you.
+								{/* The credit card shopping experience you’ve been waiting for. */}
+							</p>
+						</div>
+
+						<div>
+							<p
+								style={{
+									color: "#bcbcbc",
+								}}
+								className={styles.text}
+							>
+								Effortlessly compare top credit cards, maximize rewards, and
+								snag exclusive deals. Spend smarter, save bigger—experience the
+								best of both worlds with Plutus.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div className={styles.cards_container}>
+					<div className={styles.cards}>
+						<div>
+							<CardStack items={sampleItems} offset={15} scaleFactor={0.1} />
+						</div>
+					</div>
+				</div>
+
+				<div style={{ paddingTop: "80px" }} className={styles.integrations}>
 					<div className={styles.content}>
 						<div className={styles.title}>
 							<span>EVERYTHING IS COVERED</span>
@@ -165,36 +199,73 @@ const WebMockup = () => {
 					</div>
 				</div>
 
-				<div className={styles.integrations}>
-					<div className={styles.content}>
-						<div className={styles.title}>
-							<span>Search is over</span>
-							<p>
-								We help you find the credit card that is right for you.
-								{/* The credit card shopping experience you’ve been waiting for. */}
-							</p>
-						</div>
+				<div style={{ margin: "50px 0" }} className={styles.notifications}>
+					<div className={styles.notifs_container}>
+						<AnimatedList className={styles.customList} delay={1000}>
+							<div className={styles.notif}>
+								<div className={styles.img}>
+									<img src="/images/zomato.png" />
+								</div>
 
-						<div>
-							<p
-								style={{
-									color: "#bcbcbc",
-								}}
-								className={styles.text}
-							>
-								Effortlessly compare top credit cards, maximize rewards, and
-								snag exclusive deals. Spend smarter, save bigger—experience the
-								best of both worlds with Plutus.
-							</p>
-						</div>
+								<div className={styles.content}>
+									<p className={styles.title}>Upto 200 OFF on Zomato</p>
+									<p className={styles.subtext}>
+										via Axis Bank Select Card Credit Card
+									</p>
+								</div>
+							</div>
+
+							<div className={styles.notif}>
+								<div className={styles.img}>
+									<img src="/images/swiggy.png" />
+								</div>
+
+								<div className={styles.content}>
+									<p className={styles.title}>Upto 500 OFF on DineOut</p>
+									<p className={styles.subtext}>
+										via HDFC Bank Infinia Card Credit Card
+									</p>
+								</div>
+							</div>
+
+							<div className={styles.notif}>
+								<div className={styles.img}>
+									<img src="/images/croma.png" />
+								</div>
+
+								<div className={styles.content}>
+									<p className={styles.title}>Flat 5% Cashback on Croma</p>
+									<p className={styles.subtext}>
+										via ICICI Bank Regal Card Credit Card
+									</p>
+								</div>
+							</div>
+
+							<div className={styles.notif}>
+								<div className={styles.img}>
+									<img src="/images/booking.png" />
+								</div>
+
+								<div className={styles.content}>
+									<p className={styles.title}>Flat 8% OFF on Flights</p>
+									<p className={styles.subtext}>
+										via HDFC Bank Infinia Card Credit Card
+									</p>
+								</div>
+							</div>
+						</AnimatedList>
 					</div>
-				</div>
 
-				<div className={styles.cards_container}>
-					<div className={styles.cards}>
-						<div>
-							<CardStack items={sampleItems} offset={15} scaleFactor={0.1} />
-						</div>
+					<div className={styles.content}>
+						<p className={styles.heading_sm}>
+							Your World Tour Dreams, now a reality.
+						</p>
+						<p className={styles.text}>The Travel Card Experience</p>
+						<p className={styles.heading_lg}>
+							With Plutus, its time to wanderlust your way through life. We have
+							partnered with your favorite flight and hotel chains to curate
+							mind blowing deals for your next vacation.
+						</p>
 					</div>
 				</div>
 			</div>
