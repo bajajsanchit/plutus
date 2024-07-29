@@ -11,6 +11,7 @@ import InitialLoader from "@/components/InitialLoader";
 import HeroSection from "@/components/HeroSection";
 import VacationOffers from "@/components/VacationOffers";
 import Partners from "@/components/Partners";
+// import Globe from "@/components/Globe";
 //utils
 // import Lenis from "lenis";
 import DivergingElements from "@/components/DivergingElements";
@@ -49,6 +50,7 @@ export default function Home() {
 			<HeroSection />
 			<AppMockup />
 			<BentoGrid />
+			{/* <Globe /> */}
 			<WebMockup />
 			<VacationOffers />
 

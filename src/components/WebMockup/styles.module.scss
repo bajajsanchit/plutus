@@ -101,6 +101,81 @@
 			}
 		}
 
+		.globe {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			padding: 0px 0;
+			margin: 20px 0 60px;
+
+			.content {
+				max-width: 75%;
+				margin: auto;
+
+				.heading_sm {
+					font-family: var(--font-space);
+					color: #111111;
+					font-size: 14px;
+					font-weight: 700;
+					color: #e56d27;
+					text-transform: uppercase;
+					margin: 0;
+				}
+
+				.heading_sm_offers {
+					font-family: var(--font-space);
+					color: #111111;
+					font-size: 14px;
+					font-weight: 500;
+					text-transform: uppercase;
+					margin: 0;
+					text-decoration: underline;
+				}
+
+				.text {
+					font-family: var(--font-space);
+					color: #111111;
+					font-size: 24px;
+					font-weight: 700;
+					margin: 12px 0 0;
+				}
+
+				.heading_lg {
+					font-family: var(--font-jost);
+					color: #111111;
+					font-size: 18px;
+					line-height: 1.5;
+					font-weight: 400;
+					margin: 12px 0 20px;
+				}
+
+				.heading_md {
+					cursor: pointer;
+					font-family: var(--font-space);
+					font-size: 14px;
+					font-weight: 700;
+					color: #e56d27;
+					padding: 8px 12px;
+					border-radius: 4px;
+					border: 1px solid rgba($color: #e56d27, $alpha: 0.4);
+					max-width: 150px;
+					text-align: center;
+					background-color: rgba($color: #e56d27, $alpha: 0.3);
+				}
+
+				.partner_icons {
+					margin-top: 16px;
+					display: flex;
+
+					.icon {
+						width: 75px;
+						margin-right: 1em;
+						border-radius: 1vw;
+						border: 1px solid #bcbcbc;
+					}
+				}
+			}
+		}
+
 		.imac {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
@@ -168,7 +243,7 @@
 		}
 
 		.cards_container {
-			margin-top: 60px;
+			margin-top: 80px;
 			margin-bottom: 480px;
 
 			.red {
@@ -210,7 +285,7 @@
 						display: grid;
 						grid-template-columns: 1fr 1fr;
 						// background-color: rgba($color: #e56d27, $alpha: 0.3);
-						box-shadow: 0px 0px 15px 5px rgba(#040404, 0.08);
+						box-shadow: 0px 0px 15px 5px rgba(#040404, 0.02);
 						// border: 1px solid rgba($color: #e56d27, $alpha: 0.4);
 						padding: 40px 30px;
 						width: 80%;
@@ -229,6 +304,18 @@
 							font-weight: 500;
 							font-size: 16px;
 						}
+
+						// &:nth-of-type(5) {
+						// 	opacity: 0.5;
+						// }
+
+						// &:nth-of-type(4) {
+						// 	opacity: 0.7;
+						// }
+
+						// &:nth-of-type(3) {
+						// 	opacity: 0.8;
+						// }
 					}
 				}
 			}

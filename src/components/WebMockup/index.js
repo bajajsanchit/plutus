@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 //styles
 import styles from "./styles.module.scss";
+//components
+import Globe from "../Globe";
 
 const WebMockup = () => {
 	const sampleItems = [
@@ -117,6 +119,31 @@ const WebMockup = () => {
 
 						<div className={styles.img}>
 							<img src="/images/room-grocery.png" />
+						</div>
+					</div>
+				</div>
+
+				<div style={{ margin: "25px 0" }} className={styles.globe}>
+					<div className={styles.globe_container}>
+						<Globe />
+					</div>
+
+					<div className={styles.content}>
+						<p className={styles.heading_sm}>
+							Your World Tour Dreams, now a reality.
+						</p>
+						<p className={styles.text}>The Travel Card Experience</p>
+						<p className={styles.heading_lg}>
+							With Plutus, its time to wanderlust your way through life. We have
+							partnered with your favorite flight and hotel chains to curate
+							mind blowing deals for your next vacation.
+						</p>
+
+						<p className={styles.heading_sm_offers}>Our Partners</p>
+						<div className={styles.partner_icons}>
+							<img src="/images/mariott.png" className={styles.icon} />
+							<img src="/images/makemytrip.png" className={styles.icon} />
+							<img src="/images/booking.png" className={styles.icon} />
 						</div>
 					</div>
 				</div>
